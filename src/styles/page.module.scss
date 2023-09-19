@@ -1,0 +1,81 @@
+.landing {
+  @apply bg-bg1;
+  .nav {
+    @apply flex justify-between text-white px-3 md:px-20 py-5 border border-b-primary-default border-r-0 border-l-0 border-t-0;
+  }
+  .logo {
+    @apply text-[32px];
+  }
+  button {
+    @apply bg-primary-default w-[136px] h-[44px] rounded-lg hover:bg-primary-hover hover:border hover:border-primary-default;
+  }
+
+  .hero {
+    @apply md:px-20 flex-col md:flex-row flex justify-between md:h-[890px] py-20;
+    .heroText {
+      @apply md:w-[720px] md:h-[580px] md:py-20 w-[361px] mx-auto md:mx-0 text-center md:text-start;
+      font-weight: 600;
+      .heroTitle {
+        @apply text-[32px] md:text-[64px] md:w-[667px] md:leading-[77.45px];
+        background: linear-gradient(to right, #dfc6ff, #ba85fe, #d9bbff);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      .heroFooter {
+        @apply text-[#BBB8EA] text-[20px] w-[361px] md:w-auto md:text-[24px] mt-10 md:leading-[32px] leading-[28px];
+        font-weight: 400;
+      }
+      .icons {
+        @apply flex justify-between md:w-1/2 mt-8 md:mt-16 w-[338px] md:mx-0 mx-auto h-[46px] mb-10;
+      }
+    }
+    .preview {
+      // @apply flex md:justify-end mx-auto justify-center w-11/12 md:h-[630px] mr-2 border;
+      @apply flex justify-center mx-auto md:mr-0 mr-5;
+    }
+  }
+}
+.why {
+  @apply bg-[#191832] py-20 overflow-x-hidden px-5;
+  .whyTitle {
+    @apply text-[32px] md:text-[64px] md:w-[667px] text-center mx-auto;
+    font-weight: 600;
+    line-height: 77.45px;
+    background: linear-gradient(to right, #dfc6ff, #bb87fe, #d9bbff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  .whyDescription {
+    @apply md:w-[879px] text-[#BBB8EA] text-[20px] md:text-[24px] text-center mx-auto;
+  }
+  .whyCards {
+    @apply md:space-x-4 md:flex md:ml-20 mt-20 overflow-x-scroll md:w-[110%];
+    .whyCard {
+    @apply border-[#2C2A56] border rounded-xl py-[48px] px-[30px] w-[340px] md:w-[415px] mb-4 md:mb-0;
+      .whyCardLogo {
+        @apply bg-[#0D0C27] h-[99.2px] md:h-[124px] w-[99.2px] md:w-[124px] rounded-xl flex justify-center;
+      }
+      .whyCardTitle {
+        @apply mt-3 text-[24px] md:text-[32px] text-[#CECCEF] md:w-2/3;
+        font-weight: 600;
+      }
+      .whyCardDescription {
+        @apply text-[#BBB8EA] mt-4 text-[16px] md:text-[24px] md:leading-[32px];
+        font-weight: 400;
+      }
+    }
+  }
+  .arrows {
+    @apply hidden md:flex justify-center mt-20 space-x-5 pb-10;
+    .arrow {
+      @apply cursor-pointer;
+    }
+  }
+}
+
+.elevate {
+  @apply bg-bg3 h-[1090px] flex;
+
+}
