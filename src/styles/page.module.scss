@@ -1,7 +1,7 @@
 .landing {
-  @apply bg-bg1;
+  @apply bg-bg;
   .nav {
-    @apply flex justify-between text-white px-3 md:px-20 py-5 border border-b-primary-default border-r-0 border-l-0 border-t-0;
+    @apply flex justify-between text-[#F6F6F6] px-3 md:px-20 py-5 border border-b-primary-default border-r-0 border-l-0 border-t-0;
   }
   .logo {
     @apply text-[32px];
@@ -11,9 +11,10 @@
   }
 
   .hero {
-    @apply md:px-20 flex-col md:flex-row flex justify-between md:h-[890px] py-20;
+    @apply md:flex md:justify-center md:items-center md:px-20;
+    // @apply md:px-20 flex-col md:flex-row flex justify-between md:h-[890px] py-20;
     .heroText {
-      @apply md:w-[720px] md:h-[580px] md:py-20 w-[361px] mx-auto md:mx-0 text-center md:text-start;
+      @apply flex-1 md:w-[720px] md:h-[580px] md:py-20 w-[361px] mx-auto md:mx-0 text-center md:text-start;
       font-weight: 600;
       .heroTitle {
         @apply text-[32px] md:text-[64px] md:w-[667px] md:leading-[77.45px];
@@ -53,7 +54,7 @@
   .whyCards {
     @apply md:space-x-4 md:flex md:ml-20 mt-20 overflow-x-scroll md:w-[110%];
     .whyCard {
-    @apply border-[#2C2A56] border rounded-xl py-[48px] px-[30px] w-[340px] md:w-[415px] mb-4 md:mb-0;
+      @apply border-[#2C2A56] border rounded-xl py-[48px] px-[30px] w-[340px] md:w-[415px] mb-4 md:mb-0;
       .whyCardLogo {
         @apply bg-[#0D0C27] h-[99.2px] md:h-[124px] w-[99.2px] md:w-[124px] rounded-xl flex justify-center;
       }
@@ -76,6 +77,80 @@
 }
 
 .elevate {
-  @apply bg-bg3 h-[1090px] flex;
+  @apply bg-bg h-[1090px] flex;
+  .elevateText {
+    @apply flex-1 flex flex-col items-center justify-center md:pl-20 pt-10;
+    .elevateTitle {
+      @apply text-[32px] md:text-[48px] leading-[38.73px] md:leading-[58.09px] w-[348px] md:w-[573px];
+      font-weight: 600;
+      background: linear-gradient(to right, #dfc6ff, #be8bff);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    .elevateNote {
+      @apply text-[#BBB8EA] leading-[32px] text-[24px] mt-5 w-[573px];
+      font-weight: 500;
+    }
+  }
+  .elevatePhone {
+    @apply flex-1 flex flex-col items-center justify-center mt-20;
+  }
+}
 
+.balance {
+  @apply bg-bg h-[1090px] md:flex md:flex-row;
+  .balancePhone {
+    @apply flex-1 flex flex-col items-center justify-center;
+  }
+  .balanceText {
+    @apply flex-1 flex-col items-center justify-center flex mt-10 md:mt-20 w-[358px];
+    .balanceTitle {
+      @apply text-[32px] md:text-[48px] md:leading-[58.09px] w-[573px] leading-[38px];
+      font-weight: 600;
+      background: linear-gradient(to right, #dfc6ff, #be8bff);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    .startButton {
+      @apply bg-primary-default w-[136px] h-[44px] text-[#F6F6F6] rounded-lg mt-5 hover:bg-primary-hover hover:border hover:border-primary-default;
+    }
+  }
+}
+
+.howTo {
+  @apply h-[1248px] bg-[#DFDEF4] py-40;
+  .howToTitle {
+    @apply md:text-[64px] text-[32px] text-center;
+    font-weight: 600;
+    font-weight: 600;
+      background: linear-gradient(to right, #552B8C, #51238C, #774DAE);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+  }
+  .howToBody {
+    @apply flex;
+    .howToText {
+      @apply flex-1 flex flex-col justify-center items-center py-20;
+      .howToGroup {
+        @apply flex mb-11;
+        font-weight: 500;
+      }
+      .howIcons {
+        @apply flex;
+      }
+    }
+    .howToPhoto {
+      @apply flex-1 py-20 flex justify-center;
+      .howPhotoContainer {
+        @apply bg-[#4A41C7] h-[560px] w-[560px] flex items-end justify-center rounded-2xl;
+      }
+    }
+  }
+}
+
+.footer {
+  @apply bg-[#0F0D2C] h-[459px];
 }
