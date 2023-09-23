@@ -68,7 +68,7 @@ const howTos = [
 
 export default function Home() {
   return (
-    <main>
+    <main >
       <section className={style.landing}>
         <div className={style.nav}>
           <p className={style.logo}>Gasalt</p>
@@ -94,6 +94,7 @@ export default function Home() {
                 width={157}
                 height={46}
                 alt="app-store"
+                className={style.play}
               />
             </div>
           </div>
@@ -131,7 +132,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className={style.arrows}>
+        {/* <div className={style.arrows}>
           <Image
             src="/left-arrow.svg"
             width={20}
@@ -146,7 +147,7 @@ export default function Home() {
             alt="right-arrow"
             className={style.arrow}
           />
-        </div>
+        </div> */}
       </section>
       <section className={style.elevate}>
         <div className={style.elevateText}>
@@ -165,14 +166,14 @@ export default function Home() {
             width={185}
             height={177}
             alt="phone-send"
-            className="absolute mb-[400px] md:mb-[600px] ml-[180px] md:ml-[280px] w-[118px] h-[113px] md:w-[185px] md:h-[177px]"
+            className={style.elevatePhone1}
           />
           <Image
             src="/phone-send.png"
             width={311.62}
             height={630.56}
             alt="phone-send"
-            className="h-[403.56px] w-[199.44px] md:w-auto md:h-auto"
+            className={style.elevatePhone2}
           />
           <Image
             src="/bottom-left.png"
@@ -182,6 +183,7 @@ export default function Home() {
             className="absolute md:mt-[520px] md:mr-[350px] mr-[160px] mt-[350px] md:w-[281px] md:h-[207px] w-[180px] h-[132px]"
           />
         </div>
+        <button className={style.startButton}>Get started</button>
       </section>
       <section className={style.balance}>
         <div className={style.balancePhone}>
@@ -190,15 +192,14 @@ export default function Home() {
             width={281}
             height={207}
             alt="phone-swap"
-            className="w-[249px] h-[504px] md:mr-15 mr-20"
-            // className="absolute md:mt-[520px] md:mr-[350px] mr-[160px] mt-[350px] md:w-[281px] md:h-[207px] w-[180px] h-[132px]"
+            className={style.balancePhone1}
           />
           <Image
             src="/qr.png"
             width={281}
             height={207}
             alt="phone-swap"
-            className="absolute md:w-[257px] md:h-[409px] md:ml-[200px] mt-[280px] w-[205px] h-[327px] ml-20"
+            className={style.balancePhone2}
           />
         </div>
         <div className={style.balanceText}>
@@ -208,14 +209,15 @@ export default function Home() {
           <div className="w-[573px] mt-8">
             <>
               {features.map((feature) => (
-                <div key={feature.text} className="flex">
+                <div key={feature.text}className={style.list1}>
                   <Image
                     src="/star.svg"
                     width={32}
                     height={32}
                     alt="phone-swap"
+                    className={style.star}
                   />
-                  <p className="text-[20px] md:text-[24px] leading-[29px] text-[#BBB8EA] ml-8 my-5">
+                  <p className={style.sublist}>
                     {" "}
                     {feature.text}
                   </p>
@@ -240,11 +242,11 @@ export default function Home() {
                         width={20.9}
                         height={18.23}
                         alt="phone-swap"
-                        className="w-[20.9px] h-[18.23px]"
+                        className={style.howImage}
                       />
                     </div>
                   </div>
-                  <div className="ml-5 w-[496px] text-[#667085]">
+                  <div className={style.howToSubTextContainer}>
                     <p className="text-[20px] text-[#101828]">{how.title}</p>
                     <p>{how.note}</p>
                   </div>
@@ -263,12 +265,13 @@ export default function Home() {
                   width={157}
                   height={46}
                   alt="play-store-black"
+                  className={style.bottom}
                 />
               </div>
             </>
           </div>
-          <div className={style.howToPhoto}>
-            <div className={style.howPhotoContainer}>
+          <div className={style.howToPhotoContainer}>
+            <div className={style.howPhoto}>
               <div className="overflow-y-hidden h-[560px]">
                 <Image
                   className="mx-auto mt-[150px]"
@@ -283,19 +286,21 @@ export default function Home() {
         </div>
       </section>
       <section className={style.footer}>
-        <p className="text-[#FFFFFF] text-[32px] text-center pt-16"> Gasalt </p>
-        <p className="text-[#FFFFFF] text-[32px] text-center"> {"Let’s get started on something great"} </p>
-        <div className="mx-auto w-[310px] pt-10 space-x-10">
+        <p className={style.footerTitle}> Gasalt </p>
+        <p className={style.footerStarted}> {"Let’s get started on something great"} </p>
+        <div className={style.footerButton}>
           <button className="bg-primary-default text-[#FFF] w-[134px] h-[48px] rounded-lg">View Demo</button>
           <button className="transparent border text-[#FFF] border-primary-default w-[134px] h-[48px] rounded-lg">Get started</button>
         </div>
-        <div className="w-[1280px] border-t border-[#475467] mx-auto mt-16 flex">
-          <p className="mt-8 text-[#FFF] text-[16px] w-10/12">© 2023 Gasalt. All rights reserved.</p>
-          <div className="flex mt-8 text-[#FFF] space-x-5">
-            <p>Email</p>
+        <div className={style.footerBorder}>
+          <p className={style.footerMsg}>© 2023 Gasalt. All rights reserved.</p>
+          <div className={style.footerOptions}>
+            <p className={style.firstp}>Email</p>
             <p>Github</p>
+            <div className={style.thirdp}>
             <p>Terms</p>
             <p>Privacy</p>
+            </div>
           </div>
         </div>
 

@@ -1,46 +1,48 @@
 .landing {
   @apply bg-bg;
   .nav {
-    @apply flex justify-between text-[#F6F6F6] px-3 md:px-20 py-5 border border-b-primary-default border-r-0 border-l-0 border-t-0;
+    @apply flex justify-between text-[#F6F6F6] px-3 px-20 md:py-5 border border-b-primary-default border-r-0 border-l-0 border-t-0;
+    .logo {
+      @apply text-[32px] ;
+    }
+    button {
+      @apply bg-primary-default w-[136px]  h-[44px] rounded-lg hover:bg-primary-hover hover:border hover:border-primary-default;
+    }
   }
-  .logo {
-    @apply text-[32px];
-  }
-  button {
-    @apply bg-primary-default w-[136px] h-[44px] rounded-lg hover:bg-primary-hover hover:border hover:border-primary-default;
-  }
+ 
 
   .hero {
-    @apply md:flex md:justify-center md:items-center md:px-20;
-    // @apply md:px-20 flex-col md:flex-row flex justify-between md:h-[890px] py-20;
+    @apply flex justify-center items-center px-20;
+    // @apply px-20 flex-col flex-row flex justify-between h-[890px] py-20;
     .heroText {
-      @apply flex-1 md:w-[720px] md:h-[580px] md:py-20 w-[361px] mx-auto md:mx-0 text-center md:text-start;
+      @apply flex-1 w-[720px] h-[580px]  py-20 w-[361px] mx-auto mx-0 text-center text-start;
       font-weight: 600;
       .heroTitle {
-        @apply text-[32px] md:text-[64px] md:w-[667px] md:leading-[77.45px];
+        @apply text-[64px] w-[667px] leading-[77.45px];
         background: linear-gradient(to right, #dfc6ff, #ba85fe, #d9bbff);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
         background-clip: text;
       }
       .heroFooter {
-        @apply text-[#BBB8EA] text-[20px] w-[361px] md:w-auto md:text-[24px] mt-10 md:leading-[32px] leading-[28px];
+        @apply text-[#BBB8EA] text-[20px] w-[361px] w-auto text-[24px] mt-10 leading-[32px] leading-[28px];
         font-weight: 400;
       }
       .icons {
-        @apply flex justify-between md:w-1/2 mt-8 md:mt-16 w-[338px] md:mx-0 mx-auto h-[46px] mb-10;
+        @apply flex justify-between  w-1/2 mt-8 mt-16 w-[338px] mx-0 mx-auto h-[46px] mb-10;
       }
+
     }
     .preview {
-      // @apply flex md:justify-end mx-auto justify-center w-11/12 md:h-[630px] mr-2 border;
-      @apply flex justify-center mx-auto md:mr-0 mr-5;
+      // @apply flex justify-end mx-auto justify-center w-11/12 h-[630px] mr-2 border;
+      @apply flex justify-center mx-auto mr-0 mr-5;
     }
   }
 }
 .why {
   @apply bg-[#191832] py-20 overflow-x-hidden px-5;
   .whyTitle {
-    @apply text-[32px] md:text-[64px] md:w-[667px] text-center mx-auto;
+    @apply text-[32px] text-[64px] w-[667px] text-center mx-auto;
     font-weight: 600;
     line-height: 77.45px;
     background: linear-gradient(to right, #dfc6ff, #bb87fe, #d9bbff);
@@ -49,27 +51,27 @@
     background-clip: text;
   }
   .whyDescription {
-    @apply md:w-[879px] text-[#BBB8EA] text-[20px] md:text-[24px] text-center mx-auto;
+    @apply w-[879px] text-[#BBB8EA] text-[20px] text-[24px] text-center mx-auto;
   }
   .whyCards {
-    @apply md:space-x-4 md:flex md:ml-20 mt-20 overflow-x-scroll md:w-[110%];
+    @apply space-x-4 flex  ml-20 mt-20 overflow-x-scroll w-[110%];
     .whyCard {
-      @apply border-[#2C2A56] border rounded-xl py-[48px] px-[30px] w-[340px] md:w-[415px] mb-4 md:mb-0;
+      @apply border-[#2C2A56] border rounded-xl py-[48px] px-[30px] w-[340px] w-[415px] mb-4 mb-0;
       .whyCardLogo {
-        @apply bg-[#0D0C27] h-[99.2px] md:h-[124px] w-[99.2px] md:w-[124px] rounded-xl flex justify-center;
+        @apply bg-[#0D0C27] h-[99.2px] h-[124px] w-[99.2px] w-[124px] rounded-xl flex justify-center;
       }
       .whyCardTitle {
-        @apply mt-3 text-[24px] md:text-[32px] text-[#CECCEF] md:w-2/3;
+        @apply mt-3 text-[24px] text-[32px] text-[#CECCEF] w-2/3;
         font-weight: 600;
       }
       .whyCardDescription {
-        @apply text-[#BBB8EA] mt-4 text-[16px] md:text-[24px] md:leading-[32px];
+        @apply text-[#BBB8EA] mt-4 text-[16px] text-[24px] leading-[32px];
         font-weight: 400;
       }
     }
   }
   .arrows {
-    @apply hidden md:flex justify-center mt-20 space-x-5 pb-10;
+    @apply hidden flex justify-center mt-20 space-x-5 pb-10;
     .arrow {
       @apply cursor-pointer;
     }
@@ -77,11 +79,11 @@
 }
 
 .elevate {
-  @apply bg-bg h-[1090px] flex;
+  @apply bg-[#191832] h-[1090px] flex;
   .elevateText {
-    @apply flex-1 flex flex-col items-center justify-center md:pl-20 pt-10;
+    @apply flex-1 flex flex-col items-center justify-center pl-20 pt-10;
     .elevateTitle {
-      @apply text-[32px] md:text-[48px] leading-[38.73px] md:leading-[58.09px] w-[348px] md:w-[573px];
+      @apply text-[32px] text-[48px] leading-[38.73px] leading-[58.09px] w-[348px] w-[573px];
       font-weight: 600;
       background: linear-gradient(to right, #dfc6ff, #be8bff);
       -webkit-text-fill-color: transparent;
@@ -95,26 +97,52 @@
   }
   .elevatePhone {
     @apply flex-1 flex flex-col items-center justify-center mt-20;
+    .elevatePhone1 {
+      @apply absolute mb-[400px] md:mb-[600px] ml-[180px] md:ml-[280px] w-[118px] h-[113px] md:w-[185px] md:h-[177px]
+    }
+    .elevatePhone2 {
+      @apply h-[403.56px] w-[199.44px] md:w-auto md:h-auto
+    }
+  }
+  .startButton {
+    @apply bg-primary-default w-[136px] h-[44px] text-[#F6F6F6] rounded-lg mt-5 hover:bg-primary-hover hover:border hover:border-primary-default;
   }
 }
 
 .balance {
-  @apply bg-bg h-[1090px] md:flex md:flex-row;
+  @apply bg-bg h-[1090px] flex flex-row;
   .balancePhone {
     @apply flex-1 flex flex-col items-center justify-center;
+    .balancePhone1 {
+      @apply w-[249px] h-[504px] md:mr-[15px] mr-[20px];
+    }
+    .balancePhone2 {
+      @apply absolute md:w-[257px] md:h-[409px] md:ml-[200px] mt-[280px] w-[205px] h-[327px] ml-20;
+    }
   }
   .balanceText {
-    @apply flex-1 flex-col items-center justify-center flex mt-10 md:mt-20 w-[358px];
+    @apply flex-1 flex-col items-center justify-center flex mt-10 mt-20 w-[358px];
     .balanceTitle {
-      @apply text-[32px] md:text-[48px] md:leading-[58.09px] w-[573px] leading-[38px];
+      @apply text-[32px] text-[48px] leading-[58.09px] w-[573px] leading-[38px];
       font-weight: 600;
       background: linear-gradient(to right, #dfc6ff, #be8bff);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
       background-clip: text;
     }
+    // .feature {
+    //   display: flex;
+    //   flex-direction: column;
+    //   position: relative;
+    // }
     .startButton {
       @apply bg-primary-default w-[136px] h-[44px] text-[#F6F6F6] rounded-lg mt-5 hover:bg-primary-hover hover:border hover:border-primary-default;
+    }
+  }
+  .list1 {
+    display: flex;
+    .sublist {
+      @apply text-[20px] md:text-[24px] leading-[29px] text-[#BBB8EA] ml-8 my-5
     }
   }
 }
@@ -122,7 +150,7 @@
 .howTo {
   @apply h-[1248px] bg-[#DFDEF4] py-40;
   .howToTitle {
-    @apply md:text-[64px] text-[32px] text-center;
+    @apply text-[64px] text-[32px] text-center;
     font-weight: 600;
     font-weight: 600;
       background: linear-gradient(to right, #552B8C, #51238C, #774DAE);
@@ -137,20 +165,314 @@
       .howToGroup {
         @apply flex mb-11;
         font-weight: 500;
+        .howImage {
+          @apply w-[20.9px] h-[18.23px]
+        }
+        .howToSubTextContainer {
+          @apply ml-5 w-[496px] text-[#667085]
+        }
       }
       .howIcons {
         @apply flex;
       }
     }
-    .howToPhoto {
+    .howToPhotoContainer {
       @apply flex-1 py-20 flex justify-center;
-      .howPhotoContainer {
+      .howPhoto{
         @apply bg-[#4A41C7] h-[560px] w-[560px] flex items-end justify-center rounded-2xl;
       }
     }
   }
 }
-
 .footer {
   @apply bg-[#0F0D2C] h-[459px];
+  .footerTitle {
+    @apply text-[#FFFFFF] text-[32px] text-center pt-16
+  }
+  .footerStarted {
+    @apply text-[#FFFFFF] text-[32px] text-center;
+    background: linear-gradient(to right, #552B8C, #51238C, #774DAE);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  .footerButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+     button:first-child{
+      margin-right: 20px;
+    }
+  }
+  .footerBorder {
+    @apply w-[1280px] border-t border-[#475467] mx-auto mt-16 flex;
+    .footerMsg {
+      @apply mt-8 text-[#FFF] text-[16px] w-10/12
+    }
+    .footerOptions {
+      @apply flex mt-8 text-[#FFF] space-x-5;
+      .thirdp {
+        @apply flex space-x-5
+      }
+    }
+  }
 }
+@media (max-width: 390px) {
+.landing {
+  width: 100%;
+  .nav {
+    @apply py-2;
+    .logo {
+      position: relative;
+      right: 60px;
+      top: 11px;
+      font-size: 17px;
+    }
+    button {
+      position: relative;
+      padding: 10px;
+      left: 12px;
+    }
+  }
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    .heroText {
+      .heroTitle {
+        font-size: 30px;
+        line-height: 40px;
+        width: 93%;
+        text-indent: 40px;
+        text-align: center;
+      }
+      .heroFooter {
+        width: 89%;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 9.6px;
+      }
+      .icons {
+        position: relative;
+        right: 75px;
+        width: 60%;
+        .play {
+          margin-left: 10px;
+        }
+      }
+    }
+    .preview {
+      right: 45px;
+      position: relative;
+margin-bottom: 10px;
+    }
+  }
+
+}
+.why {
+  right: 45px;
+  position: relative;
+  // width: 90%;
+  .whyTitle {
+    width: 100%;
+    font-size: 30px;
+  }
+  .whyDescription {
+    width: 92%;
+    font-size: 16px;
+    position: relative;
+    left: 15px;
+  }
+  .whyCards {
+    flex-direction: column;
+    left: 5px;
+    position: relative;
+    padding: 2px;
+    justify-content: center;
+    margin-top: 35px;
+    .whyCard:first-child {
+      position: relative;
+      right: -10px;
+    }
+    .whyCard {
+      width: 60%;
+      height: 26vh;
+      margin-bottom: 10px;
+      .whyCardLogo {
+        width: 70px;
+        background-position: center;
+        background-size: cover;
+        height: 70px;
+       margin-top: -20px;
+      }
+      .whyCardTitle {
+        width: 96%;
+        font-size: 14px;
+      }
+      .whyCardDescription {
+        width: 100%;
+        font-size: 7px;
+        line-height: 15px;
+      }
+    }
+  }
+}
+.elevate {
+  // height: 240vh;
+  flex-direction: column;
+  .elevateText {
+    margin-top: 70px;
+    .elevateTitle {
+      font-size: 24px;
+      line-height: 26px;
+      width: 90%;
+      position: relative;
+      right: 70px;
+      top: 70px;
+    }
+    .elevateNote {
+      width: 90%;
+      font-size: 14px;
+      position: relative;
+      right: 70px;
+        top: 70px;
+      line-height: 22px;
+    }
+  }
+  .elevatePhone {
+    position: absolute;
+    left: 80px;
+  }
+  .startButton {
+    position: relative;
+    bottom: 300px;
+    left: 10px;
+    margin-top: 50px;
+  }
+}
+.balance {
+  // margin-top: 90px;
+  flex-direction: column;
+  height: 160vh;
+  .balancePhone {
+    position: absolute;
+    left: 24px;
+    margin-top: 10px;
+    // left: 20px;
+  }
+  .balanceText {
+    position: relative;
+    top: 250px;
+    .balanceTitle {
+      width: 95%;
+      font-size: 18px;
+    }
+    .list1 {
+      width: 55%;
+      position: relative;
+      left: 110px;
+    }
+  }
+  .startButton {
+    position: relative;
+    left: 120px;
+    margin-bottom: 20px;
+  }
+}
+.howTo{
+  height: 210vh;
+  .howToTitle {
+    width: 77%;
+    font-size: 25px;
+  }
+  .howToBody{
+    flex-direction: column;
+    .howToText{
+      position: relative;
+      left: 25px;
+      .howToGroup {
+        position: relative;
+          left: -10px;
+          top: 550px;
+        .howToSubTextContainer {
+          width: 63%;
+          position: relative;
+          left: -10px;
+        }
+      }
+    }
+    .howToPhotoContainer  {
+      width: 75%;
+      position: absolute;
+      left: 10px;
+      .howPhoto{
+         width: 100%;
+       padding: 20px;
+       padding-bottom: 0;
+       height: 60vh;
+
+      }
+    }
+    .howIcons {
+    flex-direction: column;
+    position: relative;
+      right: 35px;
+      top: 560px;
+      .bottom {
+        margin-top: 12px;
+      }
+    }
+  }
+}
+.footer {
+  height: 70vh;
+  position: relative;
+  margin-top: -20px;
+  .footerTitle {
+    position: absolute;
+   left: 100px;
+   font-size: 28px;
+  }
+  .footerStarted {
+    position: absolute;
+    top: 130px;
+   left: 50px;
+   font-size: 20px;
+   width: 50%;
+  }
+  .footerButton {
+    width: 82%;
+    position: absolute;
+    top: 200px;
+  }
+  .footerBorder {
+    position: absolute;
+    flex-direction: column;
+    top: 260px;
+    .footerMsg {
+      position: absolute;
+      top: 200px;
+      left: 35px;
+    }
+    .footerOptions {
+       flex-direction: column;
+       .firstp {
+        position: relative;
+        width: 9%;
+        text-align: center;
+       }
+       .thirdp {
+        @apply space-x-[-27px];
+        position: relative;
+        right: 30px;
+        justify-content: flex-start;
+       }
+       p {
+        padding: 20px;
+        position: relative;
+        left: 100px;
+       }
+    }
+  }
+}
+}
+
