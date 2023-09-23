@@ -3,10 +3,10 @@
   .nav {
     @apply flex justify-between text-[#F6F6F6] sm:px-3 md:px-3 px-20 md:py-5 border border-b-primary-default border-r-0 border-l-0 border-t-0;
     .logo {
-      @apply sm:text-[25px] text-[32px] sm:px-4 ;
+      @apply sm:text-[25px] md:text-[32px] sm:px-4 md:px-0;
     }
     button {
-      @apply bg-primary-default sm:w-[120px] sm:h-[36px] w-[136px]  h-[44px] rounded-lg hover:bg-primary-hover hover:border hover:border-primary-default;
+      @apply bg-primary-default sm:w-[120px] sm:h-[36px] md:w-[136px] md:h-[44px] rounded-lg hover:bg-primary-hover hover:border hover:border-primary-default;
     }
   }
  
@@ -15,7 +15,7 @@
     @apply md:flex justify-center md:items-center md:px-20;
     // @apply px-20 flex-col flex-row flex justify-between h-[890px] py-20;
     .heroText {
-      @apply flex-1 sm:w-[620px] sm:mt-20 md:w-[720px] md:h-[580px]  md:py-20 w-[361px] mx-auto md:mx-0 text-center text-start;
+      @apply flex-1 sm:w-[620px] sm:mt-20 md:mt-0 md:w-[720px] md:h-[580px]  md:py-20 w-[361px] mx-auto md:mx-0 text-center text-start;
       font-weight: 600;
       .heroTitle {
         @apply text-[32px] md:text-[64px] md:w-[667px] md:leading-[77.45px];
@@ -29,7 +29,7 @@
         font-weight: 400;
       }
       .icons {
-        @apply flex justify-between sm:w-[330px] w-1/2 mt-8 mt-16 w-[338px] mx-0 mx-auto h-[46px] mb-10;
+        @apply flex justify-between sm:w-[330px] w-1/2 mt-8 mt-16 md:w-[338px] mx-0 mx-auto h-[46px] mb-10;
       }
 
     }
@@ -102,7 +102,7 @@
     }
   }
   .elevatePhone {
-    @apply flex-1 flex flex-col items-center justify-center mt-20 sm:mt-[-320px];
+    @apply flex-1 flex flex-col items-center justify-center mt-20 sm:mt-[-320px] md:mt-0;
     .elevatePhone1 {
       @apply absolute mb-[400px] md:mb-[600px] ml-[180px] md:ml-[280px] w-[118px] h-[113px] md:w-[185px] md:h-[177px]
     }
