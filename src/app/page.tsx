@@ -68,7 +68,7 @@ const howTos = [
 
 export default function Home() {
   return (
-    <main >
+    <main className="sm:overflow-x-hidden">
       <section className={style.landing}>
         <div className={style.nav}>
           <p className={style.logo}>Gasalt</p>
@@ -132,7 +132,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-        {/* <div className={style.arrows}>
+        <div className={style.arrows}>
           <Image
             src="/left-arrow.svg"
             width={20}
@@ -147,7 +147,7 @@ export default function Home() {
             alt="right-arrow"
             className={style.arrow}
           />
-        </div> */}
+        </div>
       </section>
       <section className={style.elevate}>
         <div className={style.elevateText}>
@@ -236,7 +236,7 @@ export default function Home() {
               {howTos.map((how) => (
                 <div key={how.image} className={style.howToGroup}>
                   <div className="w-[48px] h-[48px] bg-[#F9F5FF] flex justify-center items-center rounded-full">
-                    <div className="w-[40px] h-[40px] bg-[#F4EBFF] flex justify-center items-center rounded-full">
+                    <div className="w-[40px] h-[40px] bg-[#F4EBFF] flex justify-center items-center rounded-full ">
                       <Image
                         src={how.image}
                         width={20.9}
