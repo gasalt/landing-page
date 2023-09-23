@@ -81,11 +81,11 @@
 }
 
 .elevate {
-  @apply bg-[#191832] h-[1090px] flex sm:flex-col sm:mt-[-100px];
+  @apply bg-[#191832] h-[1090px] flex sm:flex-col md:flex-row sm:mt-[-100px] md:mt-0;
   .elevateText {
     @apply flex-1 flex flex-col items-center justify-center md:pl-20 pt-10;
     .elevateTitle {
-      @apply text-[32px] sm:text-[26px] text-[48px] leading-[38.73px] md:leading-[58.09px] w-[348px] w-[573px];
+      @apply text-[32px] sm:text-[26px] md:text-[48px] leading-[38.73px] md:leading-[58.09px] w-[348px] w-[573px];
       font-weight: 600;
       background: linear-gradient(to right, #dfc6ff, #be8bff);
       -webkit-text-fill-color: transparent;
@@ -93,11 +93,11 @@
       background-clip: text;
     }
     .elevateNote {
-      @apply text-[#BBB8EA] leading-[32px] sm:text-[20px] text-[24px] mt-5 w-[573px];
+      @apply text-[#BBB8EA] leading-[32px] sm:text-[20px] md:text-[24px] mt-5 w-[573px];
       font-weight: 500;
     }
     .startButton {
-      @apply bg-primary-default w-[136px] h-[44px] text-[#F6F6F6] rounded-lg mt-5 hover:bg-primary-hover hover:border hover:border-primary-default sm:relative sm:top-[600px] sm:left-[15px] sm:mt-[-30px];
+      @apply bg-primary-default w-[136px] h-[44px] text-[#F6F6F6] rounded-lg mt-5 hover:bg-primary-hover hover:border hover:border-primary-default sm:relative sm:top-[600px] sm:left-[15px] sm:mt-[-30px] md:relative md:top-0 md:left-0 md:mt-10;
       right: 215px;
     }
   }
@@ -113,7 +113,7 @@
 }
 
 .balance {
-  @apply bg-bg h-[1090px] md:flex md:flex-row sm:mt-[30px];
+  @apply bg-bg h-[1090px] md:flex md:flex-row sm:mt-[30px] md:mt-0;
   .balancePhone {
     @apply flex-1 flex flex-col items-center justify-center;
     .balancePhone1 {
@@ -124,7 +124,7 @@
     }
   }
   .balanceText {
-    @apply flex-1 flex-col items-center justify-center flex mt-10 md:mt-20 sm:w-[700px] w-[358px] sm:mt-[60px] ;
+    @apply flex-1 flex-col items-center justify-center flex mt-10 sm:mt-[60px] md:mt-20 sm:w-[700px] md:w-[358px]  ;
     .balanceTitle {
       @apply text-[32px] md:text-[48px] md:leading-[58.09px] w-[573px] leading-[38px];
       font-weight: 600;
@@ -151,9 +151,9 @@
 }
 
 .howTo {
-  @apply sm:h-[1400px] h-[1248px] bg-[#DFDEF4] py-40 ;
+  @apply sm:h-[1400px] md:h-[1248px] bg-[#DFDEF4] py-40 ;
   .howToTitle {
-    @apply md:text-[64px] text-[32px] text-center sm:mt-[-70px];
+    @apply md:text-[64px] text-[32px] text-center sm:mt-[-70px] md:mt-0;
     font-weight: 600;
     font-weight: 600;
       background: linear-gradient(to right, #552B8C, #51238C, #774DAE);
@@ -164,7 +164,7 @@
   .howToBody {
     @apply sm:flex-col md:flex-row flex;
     .howToText {
-      @apply flex-1 flex flex-col justify-center items-center py-20 sm:mt-[-50px];
+      @apply flex-1 flex flex-col justify-center items-center py-20 sm:mt-[-50px] md:mt-0;
       .howToGroup {
         @apply flex mb-11;
         font-weight: 500;
