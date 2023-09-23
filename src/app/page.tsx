@@ -159,6 +159,7 @@ export default function Home() {
             Gasalt not only offers seamless meta-transactions but also empowers
             you to actively engage with Ethereum DApps.
           </p>
+        <button className={style.startButton}>Get started</button>
         </div>
         <div className={style.elevatePhone}>
           <Image
@@ -183,7 +184,6 @@ export default function Home() {
             className="absolute md:mt-[520px] md:mr-[350px] mr-[160px] mt-[350px] md:w-[281px] md:h-[207px] w-[180px] h-[132px]"
           />
         </div>
-        <button className={style.startButton}>Get started</button>
       </section>
       <section className={style.balance}>
         <div className={style.balancePhone}>
