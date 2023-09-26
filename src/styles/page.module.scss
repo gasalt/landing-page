@@ -1,48 +1,47 @@
 .landing {
   @apply bg-bg;
   .nav {
-    @apply flex justify-between text-[#F6F6F6] sm:px-3 md:px-3 px-20 md:py-5 border border-b-primary-default border-r-0 border-l-0 border-t-0;
-    .logo {
-      @apply sm:text-[25px] md:text-[32px] sm:px-4 md:px-0;
-    }
-    button {
-      @apply bg-primary-default sm:w-[120px] sm:h-[36px] md:w-[136px] md:h-[44px] rounded-lg hover:bg-primary-hover hover:border hover:border-primary-default;
-    }
+    @apply flex justify-between text-[#F6F6F6] px-3 md:px-20 py-2 border border-b-primary-default border-r-0 border-l-0 border-t-0;
+    padding-top: 25px
   }
- 
+  .logo {
+    @apply text-[32px];
+  }
+  button {
+    @apply bg-primary-default w-[136px] h-[44px] rounded-lg hover:bg-primary-hover hover:border hover:border-primary-default;
+  }
 
   .hero {
-    @apply md:flex justify-center md:items-center md:px-20;
-    // @apply px-20 flex-col flex-row flex justify-between h-[890px] py-20;
+    @apply md:flex md:justify-center md:items-center md:px-20 md:py-20 md:mt-0 mt-20 pb-20;
+    // @apply md:px-20 flex-col md:flex-row flex justify-between md:h-[890px] py-20;
     .heroText {
-      @apply flex-1 sm:w-[620px] sm:mt-20 md:mt-0 md:w-[720px] md:h-[580px]  md:py-20 w-[361px] mx-auto md:mx-0 text-center text-start;
+      @apply flex-1 md:w-[720px] md:h-[580px] md:py-20 w-[361px] mx-auto md:mx-0 text-center md:text-start;
       font-weight: 600;
       .heroTitle {
-        @apply text-[32px] md:text-[64px] md:w-[667px] md:leading-[77.45px];
+        @apply md:text-[45px] text-[30px] md:w-[501px] md:leading-[60.45px];
         background: linear-gradient(to right, #dfc6ff, #ba85fe, #d9bbff);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
         background-clip: text;
       }
       .heroFooter {
-        @apply text-[#BBB8EA] sm:w-[520px] text-[20px] w-[361px] md:w-auto md:text-[24px] mt-10 md:leading-[32px] leading-[28px];
+        @apply text-[#BBB8EA] text-[20px] w-[361px] md:w-[681px] md:text-[24px] mt-10 md:leading-[32px] leading-[28px];
         font-weight: 400;
       }
       .icons {
-        @apply flex justify-between sm:w-[330px] w-1/2 mt-8 mt-16 md:w-[338px] mx-0 mx-auto h-[46px] mb-10;
+        @apply flex justify-between  mt-10 md:mt-16 md:w-[338px] w-[330px] md:mx-0 mx-auto h-[46px] mb-10;
       }
-
     }
     .preview {
-      // @apply flex justify-end mx-auto justify-center w-11/12 h-[630px] mr-2 border;
-      @apply flex justify-center mx-auto md:mr-0 mr-5;
+      // @apply flex md:justify-end mx-auto justify-center w-11/12 md:h-[630px] mr-2 border;
+      @apply flex md:justify-center mx-auto md:mr-0 md:mr-5 ml-20 md:ml-0 md:relative md:right-0 relative right-[20px];
     }
   }
 }
 .why {
   @apply bg-[#191832] py-20 overflow-x-hidden px-5;
   .whyTitle {
-    @apply text-[32px] md:text-[64px] md:w-[667px] text-center mx-auto;
+    @apply text-[22px] md:text-[34px] md:w-[667px] text-center mx-auto md:mt-20;
     font-weight: 600;
     line-height: 77.45px;
     background: linear-gradient(to right, #dfc6ff, #bb87fe, #d9bbff);
@@ -51,29 +50,27 @@
     background-clip: text;
   }
   .whyDescription {
-    @apply sm:w-[570px] md:w-[879px] text-[#BBB8EA] text-[20px] md:text-[24px] text-center mx-auto;
+    @apply md:w-[700px] w-[400px] text-[#BBB8EA] text-[20px] md:text-[18px] text-center mx-auto;
   }
   .whyCards {
-    position: relative;
-    left: 150px;
-    @apply md:space-x-4 md:flex md:ml-20 mt-20 overflow-x-hidden md:w-[110%];
+    @apply md:space-x-4 px-20 md:px-0 md:flex md:ml-20 mt-20 md:overflow-x-hidden md:w-[118%] ;
     .whyCard {
-      @apply border-[#2C2A56] border rounded-xl py-[48px] px-[30px] w-[340px] md:w-[415px] mb-4 mb-0;
+      @apply border-[#2C2A56] border rounded-xl py-[48px] px-[30px] w-[290px] h-[319px] md:w-[500px] md:h-[415px] mb-4 md:mb-0;
       .whyCardLogo {
-        @apply bg-[#0D0C27] h-[99.2px] md:h-[124px] w-[99.2px] md:w-[124px] rounded-xl flex justify-center;
+        @apply bg-[#0D0C27] h-[99.2px] md:h-[90px] w-[99.2px] md:w-[90px] rounded-xl flex justify-center;
       }
       .whyCardTitle {
-        @apply mt-3 text-[24px] md:text-[32px] text-[#CECCEF] md:w-2/3;
+        @apply mt-3 text-[22px] md:text-[22.7px] text-[#CECCEF] w-[240px] md:w-[210px];
         font-weight: 600;
       }
       .whyCardDescription {
-        @apply text-[#BBB8EA] mt-4 text-[16px] md:text-[24px] leading-[32px];
+        @apply text-[#BBB8EA] mt-4 text-[12px] md:text-[18px] md:leading-[23px] w-[220px] md:w-[265px];
         font-weight: 400;
       }
     }
   }
   .arrows {
-    @apply sm:hidden md:flex justify-center mt-20 space-x-5 pb-10;
+    @apply hidden md:flex justify-center mt-20 space-x-5 pb-10;
     .arrow {
       @apply cursor-pointer;
     }
@@ -81,11 +78,12 @@
 }
 
 .elevate {
-  @apply bg-[#191832] h-[1090px] flex sm:flex-col md:flex-row sm:mt-[-100px] md:mt-0;
+  @apply md:h-auto h-[1000px];
+  @apply bg-bg md:h-[700px] flex md:flex-row flex-col;
   .elevateText {
-    @apply flex-1 flex flex-col items-center justify-center md:pl-20 pt-10;
+    @apply flex-1 flex flex-col items-center justify-center md:pr-[100px] md:mt-[30px] md:relative md:left-0 md:right-0 md:top-0 md:bottom-0 absolute left-20 mt-[600px];
     .elevateTitle {
-      @apply text-[32px] sm:text-[26px] md:text-[48px] leading-[38.73px] md:leading-[58.09px] w-[348px] w-[573px];
+      @apply text-[22px] md:text-[32px] leading-[26.73px] md:leading-[40.09px] w-[270px] md:w-[450px];
       font-weight: 600;
       background: linear-gradient(to right, #dfc6ff, #be8bff);
       -webkit-text-fill-color: transparent;
@@ -93,67 +91,46 @@
       background-clip: text;
     }
     .elevateNote {
-      @apply text-[#BBB8EA] leading-[32px] sm:text-[20px] md:text-[24px] mt-5 w-[573px];
+      @apply text-[#BBB8EA] md:leading-[32px] md:text-[20px] mt-5 md:w-[450px] w-[270px];
       font-weight: 500;
     }
     .startButton {
-      @apply bg-primary-default w-[136px] h-[44px] text-[#F6F6F6] rounded-lg mt-5 hover:bg-primary-hover hover:border hover:border-primary-default sm:relative sm:top-[600px] sm:left-[15px] sm:mt-[-30px] md:relative md:top-0 md:left-0 md:mt-10;
-      right: 215px;
+      @apply bg-primary-default w-[116px] h-[44px] text-[#F6F6F6] rounded-lg mt-5 hover:bg-primary-hover hover:border hover:border-primary-default md:relative md:right-[165px] relative right-[75px];
     }
   }
   .elevatePhone {
-    @apply flex-1 flex flex-col items-center justify-center mt-20 sm:mt-[-320px] md:mt-0;
-    .elevatePhone1 {
-      @apply absolute mb-[400px] md:mb-[600px] ml-[180px] md:ml-[280px] w-[118px] h-[113px] md:w-[185px] md:h-[177px]
-    }
-    .elevatePhone2 {
-      @apply h-[403.56px] w-[199.44px] md:w-auto md:h-auto
-    }
+    @apply flex-1 flex flex-col items-center justify-center md:mt-[250px] md:relative md:left-0 md:right-0 md:top-0 md:bottom-0 absolute left-[150px] mt-[100px] ;
   }
 }
 
 .balance {
-  @apply bg-bg h-[1090px] md:flex md:flex-row sm:mt-[30px] md:mt-0;
+  @apply bg-bg md:h-[1090px] h-[1200px] md:flex md:flex-row ;
   .balancePhone {
-    @apply flex-1 flex flex-col items-center justify-center;
-    .balancePhone1 {
-      @apply w-[249px] h-[504px] md:mr-[15px] mr-[20px];
-    }
-    .balancePhone2 {
-      @apply absolute md:w-[257px] md:h-[409px] md:ml-[200px] mt-[280px] w-[205px] h-[327px] ml-20;
-    }
+    @apply flex-1 flex flex-col items-center justify-center md:py-0 md:pr-[300px];
   }
   .balanceText {
-    @apply flex-1 flex-col items-center justify-center flex mt-10 sm:mt-[60px] md:mt-20 sm:w-[700px] md:w-[358px]  ;
+    @apply flex-1 flex-col items-center justify-center flex mt-[90px] md:mt-20 md:w-[358px] w-[500px] md:pr-[100px];
     .balanceTitle {
-      @apply text-[32px] md:text-[48px] md:leading-[58.09px] w-[573px] leading-[38px];
+      @apply text-[32px] md:text-[38px] md:leading-[41.09px] md:w-[573px] w-[400px] leading-[38px];
       font-weight: 600;
       background: linear-gradient(to right, #dfc6ff, #be8bff);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
       background-clip: text;
     }
-    // .feature {
-    //   display: flex;
-    //   flex-direction: column;
-    //   position: relative;
-    // }
+    .balanceList {
+      @apply md:w-[573px] w-[400px] mt-8;
+    }
     .startButton {
       @apply bg-primary-default w-[136px] h-[44px] text-[#F6F6F6] rounded-lg mt-5 hover:bg-primary-hover hover:border hover:border-primary-default;
-    }
-  }
-  .list1 {
-    display: flex;
-    .sublist {
-      @apply text-[20px] md:text-[24px] leading-[29px] text-[#BBB8EA] ml-8 my-5
     }
   }
 }
 
 .howTo {
-  @apply sm:h-[1400px] md:h-[1248px] bg-[#DFDEF4] py-40 ;
+  @apply md:h-[1000px] h-[1700px] bg-[#DFDEF4] md:py-40 py-20;
   .howToTitle {
-    @apply md:text-[64px] text-[32px] text-center sm:mt-[-70px] md:mt-0;
+    @apply md:text-[50px] text-[32px] md:text-center md:w-auto w-[390px] text-center ml-[20px];
     font-weight: 600;
     font-weight: 600;
       background: linear-gradient(to right, #552B8C, #51238C, #774DAE);
@@ -162,326 +139,158 @@
       background-clip: text;
   }
   .howToBody {
-    @apply sm:flex-col md:flex-row flex;
+    @apply flex md:flex-row flex-col;
     .howToText {
-      @apply flex-1 flex flex-col justify-center items-center py-20 sm:mt-[-50px] md:mt-0;
+      @apply flex-1 flex flex-col justify-center items-center py-20 ;
       .howToGroup {
-        @apply flex mb-11;
+        @apply flex mb-11 md:relative md:top-0 relative top-[600px];
         font-weight: 500;
-        .howImage {
-          @apply w-[20.9px] h-[18.23px] ;
-        }
-        .howToSubTextContainer {
-          @apply ml-5 w-[496px] text-[#667085]
+        .howList {
+          @apply ml-5 md:w-[454px] w-[370px] text-[#667085]
         }
       }
       .howIcons {
-        @apply flex;
+        @apply flex md:flex-row flex-col md:relative md:top-0  relative top-[600px] md:w-[400px] w-[300px];
+        .black {
+          @apply md:mt-0 mt-5;
+        }
       }
     }
-    .howToPhotoContainer {
-      @apply flex-1 py-20 flex justify-center;
-      .howPhoto{
-        @apply bg-[#4A41C7] h-[560px] w-[560px] flex items-end justify-center rounded-2xl;
+    .howToPhoto {
+      @apply flex-1 py-20 flex justify-center md:relative absolute;
+      .howPhotoContainer {
+        @apply bg-[#4A41C7] md:h-[560px] md:w-[560px] h-[550px] w-[400px] flex items-end justify-center rounded-2xl md:relative left-0 relative left-10;
       }
     }
   }
 }
+
 .footer {
-  @apply bg-[#0F0D2C] h-[459px];
-  .footerTitle {
-    @apply text-[#FFFFFF] text-[32px] text-center pt-16
-  }
+  @apply bg-[#0F0D2C] md:h-[459px] h-[600px];
   .footerStarted {
-    @apply text-[#FFFFFF] text-[32px] text-center;
+    @apply text-[#262633] md:text-[32px] text-[22px] md:w-auto w-[280px] text-center md:relative md:left-0 relative left-[100px];
     background: linear-gradient(to right, #552B8C, #51238C, #774DAE);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
-  .footerButton {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-     button:first-child{
-      margin-right: 20px;
-    }
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
   }
   .footerBorder {
-    @apply sm:w-[400px] md:w-[1280px] border-t border-[#475467] mx-auto mt-16 flex sm:flex-col sm:justify-center md:flex-row md:justify-start;
-    .footerMsg {
-      @apply mt-8 text-[#FFF] text-[16px] w-10/12 sm:text-center md:text-start;
-    }
-    .footerOptions {
-      @apply flex mt-8 text-[#FFF] sm:space-x-2 sm:justify-center md:justify-start ;
-      .thirdp {
-        @apply flex sm:space-x-2 space-x-5 ;
-      }
-    }
+    @apply md:w-[1280px] w-[330px] border-t border-[#475467] mx-auto mt-16 flex md:justify-between
+  }
+  .rights {
+    @apply mt-8 text-[#FFF] text-[16px] md:relative md:top-0 relative top-[150px]
+  }
+  .options {
+    @apply flex md:flex-row flex-col mt-8 text-[#FFF] md:space-x-5 md:space-y-0 space-y-5 md:relative md:left-0 absolute left-[200px]
   }
 }
 @media (max-width: 390px) {
-.landing {
-  width: 100%;
-  .nav {
-    @apply py-2;
-    .logo {
-      position: relative;
-      right: 60px;
-      top: 11px;
-      font-size: 17px;
-    }
-    button {
-      position: relative;
-      padding: 10px;
-      left: 12px;
-    }
-  }
-  .hero {
-    flex-direction: column;
-    justify-content: center;
-    .heroText {
-      .heroTitle {
-        font-size: 30px;
-        line-height: 40px;
-        width: 93%;
-        text-indent: 40px;
-        text-align: center;
-      }
-      .heroFooter {
-        width: 89%;
-        font-size: 18px;
-        text-align: center;
-        margin-top: 9.6px;
-      }
-      .icons {
-        position: relative;
-        right: 75px;
-        width: 60%;
-        .play {
-          margin-left: 10px;
-        }
-      }
-    }
-    .preview {
-      right: 45px;
-      position: relative;
-margin-bottom: 10px;
-    }
-  }
-
-}
-.why {
-  right: 45px;
-  position: relative;
-  // width: 90%;
-  .whyTitle {
-    width: 100%;
-    font-size: 30px;
-  }
-  .whyDescription {
-    width: 92%;
-    font-size: 16px;
-    position: relative;
-    left: 15px;
-  }
-  .whyCards {
-    flex-direction: column;
-    left: 5px;
-    position: relative;
-    padding: 2px;
-    justify-content: center;
-    margin-top: 35px;
-    .whyCard:first-child {
-      position: relative;
-      right: -10px;
-    }
-    .whyCard {
-      width: 60%;
-      height: 26vh;
-      margin-bottom: 10px;
-      .whyCardLogo {
-        width: 70px;
-        background-position: center;
-        background-size: cover;
-        height: 70px;
-       margin-top: -20px;
-      }
-      .whyCardTitle {
-        width: 96%;
-        font-size: 14px;
-      }
-      .whyCardDescription {
-        width: 100%;
-        font-size: 7px;
-        line-height: 15px;
-      }
-    }
-  }
-  .arrows {
-    @apply hidden 
-  }
-}
-.elevate {
-  // height: 240vh;
-  flex-direction: column;
-  .elevateText {
-    margin-top: 70px;
-    .elevateTitle {
-      font-size: 24px;
-      line-height: 26px;
-      width: 90%;
-      position: relative;
-      right: 70px;
-      top: 70px;
-    }
-    .elevateNote {
-      width: 90%;
-      font-size: 14px;
-      position: relative;
-      right: 70px;
-        top: 70px;
-      line-height: 22px;
-    }
-    .startButton {
-      position: relative;
-      right: 150px;
-      top: 100px;
-    }
-  }
-  .elevatePhone {
-    position: absolute;
-    left: 80px;
-  }
- 
-}
-.balance {
-  // margin-top: 90px;
-  flex-direction: column;
-  height: 160vh;
-  .balancePhone {
-    position: absolute;
-    left: 24px;
-    margin-top: 10px;
-    // left: 20px;
-  }
-  .balanceText {
-    position: relative;
-    top: 250px;
-    .balanceTitle {
-      width: 95%;
-      font-size: 18px;
-    }
-    .list1 {
-      width: 55%;
-      position: relative;
-      left: 110px;
-    }
-  }
-  .startButton {
-    position: relative;
-    left: 120px;
-    margin-bottom: 20px;
-  }
-}
-.howTo{
-  height: 210vh;
-  .howToTitle {
-    width: 77%;
-    font-size: 25px;
-  }
-  .howToBody{
-    flex-direction: column;
-    .howToText{
-      position: relative;
-      left: 25px;
-      .howToGroup {
-        position: relative;
-          left: -10px;
-          top: 550px;
-        .howToSubTextContainer {
-          width: 63%;
-          position: relative;
-          left: -10px;
-        }
-      }
-    }
-    .howToPhotoContainer  {
-      width: 75%;
-      position: absolute;
-      left: 10px;
-      .howPhoto{
-         width: 100%;
-       padding: 20px;
-       padding-bottom: 0;
-       height: 60vh;
-
-      }
-    }
-    .howIcons {
-    flex-direction: column;
-    position: relative;
-      right: 35px;
-      top: 560px;
-      .bottom {
-        margin-top: 12px;
-      }
-    }
-  }
-}
-.footer {
-  height: 70vh;
-  position: relative;
-  margin-top: -20px;
-  .footerTitle {
-    position: absolute;
-   left: 100px;
-   font-size: 28px;
-  }
-  .footerStarted {
-    position: absolute;
-    top: 130px;
-   left: 50px;
-   font-size: 20px;
-   width: 50%;
-  }
-  .footerButton {
-    width: 82%;
-    position: absolute;
-    top: 200px;
-  }
-  .footerBorder {
-    position: absolute;
-    flex-direction: column;
-    top: 260px;
-    .footerMsg {
-      position: absolute;
-      top: 200px;
-      left: 35px;
-    }
-    .footerOptions {
-       flex-direction: column;
-       .firstp {
-        position: relative;
-        width: 9%;
-        text-align: center;
-       }
-       .thirdp {
-        @apply space-x-[-27px];
-        position: relative;
-        right: 30px;
-        justify-content: flex-start;
-       }
-       p {
-        padding: 20px;
-        position: relative;
-        left: 100px;
-       }
-    }
-  }
-}
-}
-@media (max-width: 968px) {
   .landing {
+    .nav {
+      @apply py-3;
+      .logo {
+        @apply text-[22px];
+      }
+      button {
+       @apply relative 
+      }
+    }
+    .hero {
+      flex-direction: column;
+      justify-content: center;
+      .heroText {
+        .heroTitle {
+          text-indent: 40px;
+          text-align: center;
+        }
+        .heroFooter {
+          text-align: center;
+        }
+        .icons {
+          width: 90%;
+          .play {
+            margin-left: 15px;
+          }
+        }
+      }
+      .preview {
+        right: 45px;
+        position: relative;
+  margin-bottom: 10px;
+      }
+    }
+  
   }
-}
+  .why {
+    .whyDescription {
+      width: 100%;
+    }
+    .whyCards {
+      .whyCard{
+        position: relative;
+        right: 35px;
+      }
+    }
+  }
+  .elevate {
+    .elevateText {
+      margin-left: -44px;
+    }
+    .elevatePhone {
+      position: absolute;
+      left: 100px;
+    }
+   
+  }
+  .balance {
+    @apply h-[1250px];
+    .balanceText {
+      position: relative;
+      right: 38px;
+      .balanceTitle {
+        width: 70%;
+        font-size: 30px;
+      }
+      .balanceList {
+        width: 70%;
+      }
+    }
+  }
+  .howTo{
+    .howToBody{
+      .howToPhoto {
+        .howPhotoContainer {
+          @apply h-[550px] w-[350px];
+          position: relative;
+          left: 20px;
+        }
+      }
+      .howToText{
+        .howIcons {
+          @apply w-[245px];
+        }
+        .howToGroup {
+          .howList {
+            @apply w-[300px]
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    height: 700px;
+    .footerStarted {
+      position: relative;
+     left: 50px;
+    }
+    
+    .rights {
+      @apply relative right-[-20px]
+    }
+    .options {
+      @apply absolute left-[180px]
+    }
+      }
+    
+    }
+   

@@ -7,12 +7,6 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
-    },
     extend: {
       backgroundImage: {
         bg: 'url("/background1.png")',
@@ -33,4 +27,3 @@ const config: Config = {
   plugins: [],
 }
 export default config
-
