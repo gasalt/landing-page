@@ -66,15 +66,15 @@ const howTos = [
 ];
 
 export default function Home() {
-  const slideLeft = (event) => {
+  const slideLeft = (event: any) => {
     event.preventDefault()
-    let slider = document.getElementById('slider');
-    slider.scrollLeft = slider.scrollLeft +=300
+    let slider = document.getElementById('slider')!;
+    slider!.scrollLeft = slider.scrollLeft +=300
   };
 
-  const slideRight = (event) => {
+  const slideRight = (event: any) => {
     event.preventDefault()
-    let slider = document.getElementById('slider');
+    let slider = document.getElementById('slider')!;
    slider.scrollLeft = slider.scrollLeft -=300;
   };
 
