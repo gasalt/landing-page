@@ -1,6 +1,6 @@
+"use client"
 import Image from "next/image";
 import style from "@/styles/page.module.scss";
-
 const whyCards = [
   {
     logo: "/pay.svg",
@@ -27,7 +27,6 @@ const whyCards = [
       "Send multiple tokens to numerous addresses in a single transaction. Saving time and energy was never this easy!",
   },
 ];
-
 const features = [
   {
     text: "Simplify sharing with a complimentary .gasalt.ens domain.",
@@ -67,6 +66,18 @@ const howTos = [
 ];
 
 export default function Home() {
+  const slideLeft = (event) => {
+    event.preventDefault()
+    let slider = document.getElementById('slider');
+    slider.scrollLeft = slider.scrollLeft +=300
+  };
+
+  const slideRight = (event) => {
+    event.preventDefault()
+    let slider = document.getElementById('slider');
+   slider.scrollLeft = slider.scrollLeft -=300;
+  };
+
   return (
     <main>
       <section className={style.landing}>
@@ -121,7 +132,7 @@ export default function Home() {
         <p
           className={style.whyDescription}
         >{`While other wallets fall short, we've cracked the code to empower you with seamless DApp interaction on the Ethereum network.`}</p>
-        <div className={style.whyCards}>
+        <div className={style.whyCards} id='slider'>
           {whyCards.map((card) => (
             <div key={card.logo} className={style.whyCard}>
               <div className={style.whyCardLogo}>
@@ -139,6 +150,7 @@ export default function Home() {
             height={20}
             alt="left-arrow"
             className={style.arrow}
+            onClick={slideRight}
           />
           <Image
             src="/right-arrow.svg"
@@ -146,6 +158,7 @@ export default function Home() {
             height={20}
             alt="right-arrow"
             className={style.arrow}
+            onClick={slideLeft}
           />
         </div>
       </section>
@@ -205,7 +218,7 @@ export default function Home() {
         </div>
         <div className={style.balanceText}>
           <p className={style.balanceTitle}>
-            Discover a world of convenience, flexibility like never before.
+           Discover a world of convenience, flexibility like never before.
           </p>
           <div className={style.balanceList}>
             <>
@@ -217,7 +230,7 @@ export default function Home() {
                     height={32}
                     alt="phone-swap"
                   />
-                  <p className="text-[20px] md:text-[23px] leading-[29px] text-[#BBB8EA] ml-8 my-5">
+                  <p className="text-[15px] md:text-[23px] md:leading-[29px] leading-[20px] text-[#BBB8EA] ml-8 my-5">
                     {" "}
                     {feature.text}
                   </p>
@@ -286,7 +299,7 @@ export default function Home() {
         </div>
       </section>
       <section className={style.footer}>
-        <p className="text-[#FFFFFF] text-[32px] text-center pt-16"> Gasalt </p>
+        <p className="text-[#FFFFFF] md:text-[32px] text-[22px] text-center pt-16"> Gasalt </p>
         <p className={style.footerStarted}> {"Let’s get started on something great"} </p>
         <div className="mx-auto w-[310px] pt-10 space-x-10">
           <button className="bg-primary-default text-[#FFF] w-[134px] h-[48px] rounded-lg">View Demo</button>

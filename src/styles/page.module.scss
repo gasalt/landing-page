@@ -34,12 +34,12 @@
     }
     .preview {
       // @apply flex md:justify-end mx-auto justify-center w-11/12 md:h-[630px] mr-2 border;
-      @apply flex md:justify-center mx-auto md:mr-0 md:mr-5 ml-20 md:ml-0 md:relative md:right-0 relative right-[20px];
+      @apply flex md:justify-center mx-auto md:mr-0 md:mr-5 ml-20 md:ml-0 md:relative md:right-0 relative right-[-50px];
     }
   }
 }
 .why {
-  @apply bg-[#191832] py-20 overflow-x-hidden px-5;
+  @apply bg-[#191832] py-20 px-5;
   .whyTitle {
     @apply text-[22px] md:text-[34px] md:w-[667px] text-center mx-auto md:mt-20;
     font-weight: 600;
@@ -53,18 +53,18 @@
     @apply md:w-[700px] w-[400px] text-[#BBB8EA] text-[20px] md:text-[18px] text-center mx-auto;
   }
   .whyCards {
-    @apply md:space-x-4 px-20 md:px-0 md:flex md:ml-20 mt-20 md:overflow-x-hidden md:w-[118%] ;
+    @apply md:space-x-4 px-20 md:px-0 md:flex md:ml-20 mt-20 overflow-x-scroll scrollbar-hide md:w-[78%];
     .whyCard {
-      @apply border-[#2C2A56] border rounded-xl py-[48px] px-[30px] w-[290px] h-[319px] md:w-[500px] md:h-[415px] mb-4 md:mb-0;
+      @apply border-[#2C2A56] border rounded-xl py-[48px] md:pl-[45px] px-[30px] md:pr-[50px] w-[290px] h-[319px] md:w-[590px] md:h-[415px] mb-4 md:mb-0;
       .whyCardLogo {
         @apply bg-[#0D0C27] h-[99.2px] md:h-[90px] w-[99.2px] md:w-[90px] rounded-xl flex justify-center;
       }
       .whyCardTitle {
-        @apply mt-3 text-[22px] md:text-[22.7px] text-[#CECCEF] w-[240px] md:w-[210px];
+        @apply mt-3 text-[22px] md:text-[21.7px] text-[#CECCEF] w-[240px] md:w-[204px];
         font-weight: 600;
       }
       .whyCardDescription {
-        @apply text-[#BBB8EA] mt-4 text-[12px] md:text-[18px] md:leading-[23px] w-[220px] md:w-[265px];
+        @apply text-[#BBB8EA] mt-4 text-[12px] md:text-[18px] md:leading-[33px] w-[220px] md:w-[285px];
         font-weight: 400;
       }
     }
@@ -106,7 +106,7 @@
 .balance {
   @apply bg-bg md:h-[1090px] h-[1200px] md:flex md:flex-row ;
   .balancePhone {
-    @apply flex-1 flex flex-col items-center justify-center md:py-0 md:pr-[300px];
+    @apply flex-1 flex flex-col items-center justify-center md:py-0 md:pr-[300px] ml-[-140px] md:ml-0;
   }
   .balanceText {
     @apply flex-1 flex-col items-center justify-center flex mt-[90px] md:mt-20 md:w-[358px] w-[500px] md:pr-[100px];
@@ -143,14 +143,14 @@
     .howToText {
       @apply flex-1 flex flex-col justify-center items-center py-20 ;
       .howToGroup {
-        @apply flex mb-11 md:relative md:top-0 relative top-[600px];
+        @apply flex mb-11 md:relative md:top-0 md:right-0 relative top-[600px] right-[45px];
         font-weight: 500;
         .howList {
           @apply ml-5 md:w-[454px] w-[370px] text-[#667085]
         }
       }
       .howIcons {
-        @apply flex md:flex-row flex-col md:relative md:top-0  relative top-[600px] md:w-[400px] w-[300px];
+        @apply flex md:flex-row flex-col md:relative md:top-0 md:right-0 relative top-[600px] right-[50px] md:w-[400px] w-[300px];
         .black {
           @apply md:mt-0 mt-5;
         }
@@ -168,20 +168,17 @@
 .footer {
   @apply bg-[#0F0D2C] md:h-[459px] h-[600px];
   .footerStarted {
-    @apply text-[#262633] md:text-[32px] text-[22px] md:w-auto w-[280px] text-center md:relative md:left-0 relative left-[100px];
-    background: linear-gradient(to right, #552B8C, #51238C, #774DAE);
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      background-clip: text;
+    @apply md:text-[32px] text-[32px] md:w-auto w-[300px] text-center md:relative md:left-0 relative left-[150px];
+    color: rgb(203, 170, 230);
   }
   .footerBorder {
     @apply md:w-[1280px] w-[330px] border-t border-[#475467] mx-auto mt-16 flex md:justify-between
   }
   .rights {
-    @apply mt-8 text-[#FFF] text-[16px] md:relative md:top-0 relative top-[150px]
+    @apply mt-8 text-[#FFF] text-[16px] md:relative md:top-0 md:left-0 relative top-[150px] left-[40px];
   }
   .options {
-    @apply flex md:flex-row flex-col mt-8 text-[#FFF] md:space-x-5 md:space-y-0 space-y-5 md:relative md:left-0 absolute left-[200px]
+    @apply flex md:flex-row flex-col mt-8 text-[#FFF] md:space-x-5 md:space-y-0 space-y-5 md:relative md:right-0 absolute right-[200px]
   }
 }
 @media (max-width: 390px) {
@@ -244,12 +241,19 @@
   }
   .balance {
     @apply h-[1250px];
+    .balancePhone {
+      width: 390px;
+      margin-left: -2px;
+    }
     .balanceText {
+      width: 390px;
       position: relative;
       right: 38px;
       .balanceTitle {
-        width: 70%;
-        font-size: 30px;
+        width: 260px;
+        font-size: 23px;
+        line-height: 26px;
+        font-weight: 700;
       }
       .balanceList {
         width: 70%;
@@ -257,6 +261,12 @@
     }
   }
   .howTo{
+    width: "390px";
+    height: 19.00px;
+    .howToTitle {
+      font-size: 29px;
+      width: 340px
+    }
     .howToBody{
       .howToPhoto {
         .howPhotoContainer {
@@ -267,11 +277,11 @@
       }
       .howToText{
         .howIcons {
-          @apply w-[245px];
+          @apply w-[143px];
         }
         .howToGroup {
           .howList {
-            @apply w-[300px]
+            @apply w-[210px]
           }
         }
       }
@@ -282,6 +292,7 @@
     .footerStarted {
       position: relative;
      left: 50px;
+     
     }
     
     .rights {
