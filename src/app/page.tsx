@@ -1,6 +1,6 @@
+"use client"
 import Image from "next/image";
 import style from "@/styles/page.module.scss";
-
 const whyCards = [
   {
     logo: "/pay.svg",
@@ -27,7 +27,6 @@ const whyCards = [
       "Send multiple tokens to numerous addresses in a single transaction. Saving time and energy was never this easy!",
   },
 ];
-
 const features = [
   {
     text: "Simplify sharing with a complimentary .gasalt.ens domain.",
@@ -67,6 +66,18 @@ const howTos = [
 ];
 
 export default function Home() {
+  const slideLeft = (event) => {
+    event.preventDefault()
+    let slider = document.getElementById('slider');
+    slider.scrollLeft = slider.scrollLeft +=300
+  };
+
+  const slideRight = (event) => {
+    event.preventDefault()
+    let slider = document.getElementById('slider');
+   slider.scrollLeft = slider.scrollLeft -=300;
+  };
+
   return (
     <main>
       <section className={style.landing}>
@@ -94,12 +105,13 @@ export default function Home() {
                 width={157}
                 height={46}
                 alt="app-store"
+                className={style.play}
               />
             </div>
           </div>
           <div className={style.preview}>
             <Image
-              className="ml-[90px] z-20 md:w-[311px] md:h-[630px] h-[467px] w-[230.79px]"
+              className="ml-[120px] z-20 md:w-[311px] md:h-[630px] h-[467px] w-[230.79px]"
               src="/phone-front.svg"
               width={311}
               height={630}
@@ -120,7 +132,7 @@ export default function Home() {
         <p
           className={style.whyDescription}
         >{`While other wallets fall short, we've cracked the code to empower you with seamless DApp interaction on the Ethereum network.`}</p>
-        <div className={style.whyCards}>
+        <div className={style.whyCards} id='slider'>
           {whyCards.map((card) => (
             <div key={card.logo} className={style.whyCard}>
               <div className={style.whyCardLogo}>
@@ -138,6 +150,7 @@ export default function Home() {
             height={20}
             alt="left-arrow"
             className={style.arrow}
+            onClick={slideRight}
           />
           <Image
             src="/right-arrow.svg"
@@ -145,6 +158,7 @@ export default function Home() {
             height={20}
             alt="right-arrow"
             className={style.arrow}
+            onClick={slideLeft}
           />
         </div>
       </section>
@@ -158,6 +172,7 @@ export default function Home() {
             Gasalt not only offers seamless meta-transactions but also empowers
             you to actively engage with Ethereum DApps.
           </p>
+          <button className={style.startButton}>Get started</button>
         </div>
         <div className={style.elevatePhone}>
           <Image
@@ -165,21 +180,21 @@ export default function Home() {
             width={185}
             height={177}
             alt="phone-send"
-            className="absolute mb-[400px] md:mb-[600px] ml-[180px] md:ml-[280px] w-[118px] h-[113px] md:w-[185px] md:h-[177px]"
+            className="absolute mb-[400px] md:mb-[570px] ml-[180px] md:ml-[340px] w-[118px] h-[113px] md:w-[185px] md:h-[177px]"
           />
           <Image
             src="/phone-send.png"
-            width={311.62}
-            height={630.56}
+            width={300}
+            height={600}
             alt="phone-send"
-            className="h-[403.56px] w-[199.44px] md:w-auto md:h-auto"
+            className="h-[403.56px] w-[199.44px] md:w-[300px] md:h-[600px]"
           />
           <Image
             src="/bottom-left.png"
-            width={281}
+            width={250}
             height={207}
             alt="phone-send-wallets"
-            className="absolute md:mt-[520px] md:mr-[350px] mr-[160px] mt-[350px] md:w-[281px] md:h-[207px] w-[180px] h-[132px]"
+            className="absolute md:mt-[520px] md:mr-[450px] mr-[160px] mt-[350px] md:w-[281px] md:h-[207px] w-[180px] h-[132px]"
           />
         </div>
       </section>
@@ -198,14 +213,14 @@ export default function Home() {
             width={281}
             height={207}
             alt="phone-swap"
-            className="absolute md:w-[257px] md:h-[409px] md:ml-[200px] mt-[280px] w-[205px] h-[327px] ml-20"
+            className="absolute md:w-[257px] md:h-[409px] md:ml-[240px] mt-[280px] w-[205px] h-[327px] ml-20"
           />
         </div>
         <div className={style.balanceText}>
           <p className={style.balanceTitle}>
-            Discover a world of convenience, flexibility like never before.
+           Discover a world of convenience, flexibility like never before.
           </p>
-          <div className="w-[573px] mt-8">
+          <div className={style.balanceList}>
             <>
               {features.map((feature) => (
                 <div key={feature.text} className="flex">
@@ -215,7 +230,7 @@ export default function Home() {
                     height={32}
                     alt="phone-swap"
                   />
-                  <p className="text-[20px] md:text-[24px] leading-[29px] text-[#BBB8EA] ml-8 my-5">
+                  <p className="text-[15px] md:text-[23px] md:leading-[29px] leading-[20px] text-[#BBB8EA] ml-8 my-5">
                     {" "}
                     {feature.text}
                   </p>
@@ -244,9 +259,9 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <div className="ml-5 w-[496px] text-[#667085]">
-                    <p className="text-[20px] text-[#101828]">{how.title}</p>
-                    <p>{how.note}</p>
+                  <div className={style.howList}>
+                    <p className="text-[20px] text-[#101828] md:w-auto w-[280px]">{how.title}</p>
+                    <p className="md:w-auto w-[260px]">{how.note}</p>
                   </div>
                 </div>
               ))}
@@ -263,6 +278,7 @@ export default function Home() {
                   width={157}
                   height={46}
                   alt="play-store-black"
+                  className={style.black}
                 />
               </div>
             </>
@@ -283,19 +299,22 @@ export default function Home() {
         </div>
       </section>
       <section className={style.footer}>
-        <p className="text-[#FFFFFF] text-[32px] text-center pt-16"> Gasalt </p>
-        <p className="text-[#FFFFFF] text-[32px] text-center"> {"Let’s get started on something great"} </p>
+        <p className="text-[#FFFFFF] md:text-[32px] text-[22px] text-center pt-16"> Gasalt </p>
+        <p className={style.footerStarted}> {"Let’s get started on something great"} </p>
         <div className="mx-auto w-[310px] pt-10 space-x-10">
           <button className="bg-primary-default text-[#FFF] w-[134px] h-[48px] rounded-lg">View Demo</button>
           <button className="transparent border text-[#FFF] border-primary-default w-[134px] h-[48px] rounded-lg">Get started</button>
         </div>
-        <div className="w-[1280px] border-t border-[#475467] mx-auto mt-16 flex">
-          <p className="mt-8 text-[#FFF] text-[16px] w-10/12">© 2023 Gasalt. All rights reserved.</p>
-          <div className="flex mt-8 text-[#FFF] space-x-5">
+        <div className={style.footerBorder}>
+          <p className={style.rights}>© 2023 Gasalt. All rights reserved.</p>
+          <div className={style.options}>
             <p>Email</p>
             <p>Github</p>
+            <div className="flex space-x-5 md:relative md:right-0 relative right-10">
             <p>Terms</p>
             <p>Privacy</p>
+            </div>
+            
           </div>
         </div>
 
