@@ -1,28 +1,28 @@
 "use client"
 import Image from "next/image";
 import style from "@/styles/page.module.scss";
-const prefix = '/landing-page'
+const prefix = ''
 const whyCards = [
   {
-    logo: `${prefix}/pay.svg`,
+    logo: `/pay.svg`,
     title: "Pay with any token",
     detail:
       "Send tokens to any address and choose to pay your transaction fees in the token you prefer.",
   },
   {
-    logo: `${prefix}/browser.svg`,
+    logo: `/browser.svg`,
     title: "Gasalt’s in-app browser",
     detail:
       "Dive into the exciting world of DApps right from our in-app browser, and yes, you can pay transaction fees your way!",
   },
   {
-    logo: `${prefix}/send.svg`,
+    logo: `/send.svg`,
     title: "Send funds to multiple addresses",
     detail:
       "Send multiple tokens to numerous addresses in a single transaction. Saving time  was never this easy!",
   },
   {
-    logo: `${prefix}/open.svg`,
+    logo: `/open.svg`,
     title: "Open source and free",
     detail:
       "Send multiple tokens to numerous addresses in a single transaction. Saving time and energy was never this easy!",
@@ -45,22 +45,22 @@ const features = [
 
 const howTos = [
   {
-    image: `${prefix}/heart.svg`,
+    image: `/heart.svg`,
     title: "Download the official Gasalt wallet",
     note: "Begin your journey by downloading the official Gasalt wallet. It's your gateway to a world of convenience and control.",
   },
   {
-    image: `${prefix}/refresh.svg`,
+    image: `/refresh.svg`,
     title: "Log in using your email.",
     note: "No more tedious sign-up processes or manual backups! Simply log in using your email and experience quick and secure access to your wallet.",
   },
   {
-    image: `${prefix}/ignore.svg`,
+    image: `/ignore.svg`,
     title: "Set up your free Gasalt ENS name",
     note: "Make sharing your wallet address a breeze with your very own Gasalt ENS name – absolutely free!",
   },
   {
-    image: `${prefix}/plus.svg`,
+    image: `/plus.svg`,
     title: "Start receiving tokens into your wallet",
     note: "Once you're set up, start receiving tokens into your wallet effortlessly. Gasalt makes managing your crypto assets a seamless experience.",
   },
@@ -96,13 +96,13 @@ export default function Home() {
             </p>
             <div className={style.icons}>
               <Image
-                src={`${prefix}/app-store.svg`}
+                src={`/app-store.svg`}
                 width={157}
                 height={46}
                 alt="app-store"
               />
               <Image
-                src={`${prefix}/play-store.svg`}
+                src={`/play-store.svg`}
                 width={157}
                 height={46}
                 alt="app-store"
@@ -113,14 +113,14 @@ export default function Home() {
           <div className={style.preview}>
             <Image
               className="ml-[120px] z-20 md:w-[311px] md:h-[630px] h-[467px] w-[230.79px]"
-              src={`${prefix}/phone-front.svg`}
+              src={`/phone-front.svg`}
               width={311}
               height={630}
               alt="iphone"
             />
             <Image
               className="md:mr-56 mt-5 overflow-hidden absolute h-[434.2px] w-[214.58px] md:w-[289px] md:h-[586px]"
-              src={`${prefix}/phone-balance.svg`}
+              src={`/phone-balance.svg`}
               width={289}
               height={586}
               alt="iphone"
@@ -146,7 +146,7 @@ export default function Home() {
         </div>
         <div className={style.arrows}>
           <Image
-            src={`${prefix}/left-arrow.svg`}
+            src={`/left-arrow.svg`}
             width={20}
             height={20}
             alt="left-arrow"
@@ -154,7 +154,7 @@ export default function Home() {
             onClick={slideRight}
           />
           <Image
-            src={`${prefix}/right-arrow.svg`}
+            src={`/right-arrow.svg`}
             width={20}
             height={20}
             alt="right-arrow"
@@ -177,21 +177,21 @@ export default function Home() {
         </div>
         <div className={style.elevatePhone}>
           <Image
-            src={`${prefix}/top-right.png`}
+            src={`/top-right.png`}
             width={185}
             height={177}
             alt="phone-send"
             className="absolute mb-[400px] md:mb-[570px] ml-[180px] md:ml-[340px] w-[118px] h-[113px] md:w-[185px] md:h-[177px]"
           />
           <Image
-            src={`${prefix}/phone-send.png`}
+            src={`/phone-send.png`}
             width={300}
             height={600}
             alt="phone-send"
             className="h-[403.56px] w-[199.44px] md:w-[300px] md:h-[600px]"
           />
           <Image
-            src={`${prefix}/bottom-left.png`}
+            src={`/bottom-left.png`}
             width={250}
             height={207}
             alt="phone-send-wallets"
@@ -202,7 +202,7 @@ export default function Home() {
       <section className={style.balance}>
         <div className={style.balancePhone}>
           <Image
-            src={`${prefix}/swap.png`}
+            src={`/swap.png`}
             width={281}
             height={207}
             alt="phone-swap"
@@ -210,7 +210,7 @@ export default function Home() {
             // className="absolute md:mt-[520px] md:mr-[350px] mr-[160px] mt-[350px] md:w-[281px] md:h-[207px] w-[180px] h-[132px]"
           />
           <Image
-            src={`${prefix}/qr.png`}
+            src={`/qr.png`}
             width={281}
             height={207}
             alt="phone-swap"
@@ -226,7 +226,7 @@ export default function Home() {
               {features.map((feature) => (
                 <div key={feature.text} className="flex">
                   <Image
-                    src={`${prefix}/star.svg`}
+                    src={`/star.svg`}
                     width={32}
                     height={32}
                     alt="phone-swap"
@@ -268,14 +268,14 @@ export default function Home() {
               ))}
               <div className={style.howIcons}>
                 <Image
-                  src={`${prefix}/app-store-black.png`}
+                  src={`/app-store-black.png`}
                   width={157}
                   height={46}
                   alt="app-store-black"
                   className="mr-10"
                 />
                 <Image
-                  src={`${prefix}/play-store-black.png`}
+                  src={`/play-store-black.png`}
                   width={157}
                   height={46}
                   alt="play-store-black"
@@ -289,7 +289,7 @@ export default function Home() {
               <div className="overflow-y-hidden h-[560px]">
                 <Image
                   className="mx-auto mt-[150px]"
-                  src={`${prefix}/phone-front.svg`}
+                  src={`/phone-front.svg`}
                   width={332}
                   height={673}
                   alt="iphone"
