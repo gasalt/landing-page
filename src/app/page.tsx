@@ -1,4 +1,5 @@
 "use client";
+import { Slide, Fade, Zoom } from "react-awesome-reveal";
 import Image from "next/image";
 import style from "@/styles/page.module.scss";
 const prefix = "";
@@ -95,37 +96,41 @@ export default function Home() {
               {`Seamlessly send tokens, choose your preferred transaction fee token, explore DApps within the app, and simplify multi-token transfers.`}{" "}
             </p>
             <div className={style.icons}>
-              <Image
-                src={`/app-store.svg`}
-                width={157}
-                height={46}
-                alt="app-store"
-              />
-              <Image
-                src={`/play-store.svg`}
-                width={157}
-                height={46}
-                alt="app-store"
-                className={style.play}
-              />
+              <Fade cascade direction="up" delay={500} triggerOnce>
+                <Image
+                  src={`/app-store.svg`}
+                  width={157}
+                  height={46}
+                  alt="app-store"
+                />
+                <Image
+                  src={`/play-store.svg`}
+                  width={157}
+                  height={46}
+                  alt="app-store"
+                  className={style.play}
+                />
+              </Fade>
             </div>
           </div>
-          <div className={style.preview}>
-            <Image
-              className="ml-[120px] z-20 md:w-[311px] md:h-[630px] h-[467px] w-[230.79px]"
-              src={`/phone-front.svg`}
-              width={311}
-              height={630}
-              alt="iphone"
-            />
-            <Image
-              className="md:mr-56 mt-5 overflow-hidden absolute h-[434.2px] w-[214.58px] md:w-[289px] md:h-[586px]"
-              src={`/phone-balance.svg`}
-              width={289}
-              height={586}
-              alt="iphone"
-            />
-          </div>
+          <Slide cascade direction="right" delay={100} triggerOnce>
+            <div className={style.preview}>
+              <Image
+                className="ml-[120px] z-20 md:w-[311px] md:h-[630px] h-[467px] w-[230.79px]"
+                src={`/phone-front.svg`}
+                width={311}
+                height={630}
+                alt="iphone"
+              />
+              <Image
+                className="md:mr-56 mt-5 overflow-hidden absolute h-[434.2px] w-[214.58px] md:w-[289px] md:h-[586px]"
+                src={`/phone-balance.svg`}
+                width={289}
+                height={586}
+                alt="iphone"
+              />
+            </div>
+          </Slide>
         </div>
       </section>
       <section className={style.why}>
@@ -134,33 +139,42 @@ export default function Home() {
           className={style.whyDescription}
         >{`While other wallets fall short, we've cracked the code to empower you with seamless DApp interaction on the Ethereum network.`}</p>
         <div className={style.whyCards} id="slider">
-          {whyCards.map((card) => (
-            <div key={card.logo} className={style.whyCard}>
-              <div className={style.whyCardLogo}>
-                <Image src={card.logo} width={72} height={72} alt="pay-logo" />
+          <Fade direction="right" delay={200} cascade triggerOnce>
+            {whyCards.map((card) => (
+              <div key={card.logo} className={style.whyCard}>
+                <div className={style.whyCardLogo}>
+                  <Image
+                    src={card.logo}
+                    width={72}
+                    height={72}
+                    alt="pay-logo"
+                  />
+                </div>
+                <p className={style.whyCardTitle}>{card.title}</p>
+                <p className={style.whyCardDescription}>{card.detail}</p>
               </div>
-              <p className={style.whyCardTitle}>{card.title}</p>
-              <p className={style.whyCardDescription}>{card.detail}</p>
-            </div>
-          ))}
+            ))}
+          </Fade>
         </div>
         <div className={style.arrows}>
-          <Image
-            src={`/left-arrow.svg`}
-            width={20}
-            height={20}
-            alt="left-arrow"
-            className={style.arrow}
-            onClick={slideRight}
-          />
-          <Image
-            src={`/right-arrow.svg`}
-            width={20}
-            height={20}
-            alt="right-arrow"
-            className={style.arrow}
-            onClick={slideLeft}
-          />
+          <Zoom delay={200} direction="left" triggerOnce>
+            <Image
+              src={`/left-arrow.svg`}
+              width={20}
+              height={20}
+              alt="left-arrow"
+              className={style.arrow}
+              onClick={slideRight}
+            />
+            <Image
+              src={`/right-arrow.svg`}
+              width={20}
+              height={20}
+              alt="right-arrow"
+              className={style.arrow}
+              onClick={slideLeft}
+            />
+          </Zoom>
         </div>
       </section>
       <section className={style.elevate}>
@@ -187,19 +201,21 @@ export default function Home() {
             className="absolute md:mt-[520px] md:mr-[450px] mr-[160px] mt-[350px] md:w-[281px] md:h-[207px] w-[180px] h-[132px]"
           />
         </div>
-        <div className={style.elevateText}>
-          <p className={style.elevateTitle}>
-            Elevate your DApp experience with Gasalt, the game-changing
-            meta-transaction wallet.
-          </p>
-          <p className={style.elevateNote}>
-            Gasalt not only offers seamless meta-transactions but also empowers
-            you to actively engage with Ethereum DApps.
-          </p>
-          <div className={style.startButton}>
-            <button>Get Started</button>
+        <Slide direction="left" cascade delay={200}>
+          <div className={style.elevateText}>
+            <p className={style.elevateTitle}>
+              Elevate your DApp experience with Gasalt, the game-changing
+              meta-transaction wallet.
+            </p>
+            <p className={style.elevateNote}>
+              Gasalt not only offers seamless meta-transactions but also
+              empowers you to actively engage with Ethereum DApps.
+            </p>
+            <div className={style.startButton}>
+              <button>Get Started</button>
+            </div>
           </div>
-        </div>
+        </Slide>
       </section>
       <section className={style.balance}>
         <div className={style.balancePhone}>
@@ -218,49 +234,53 @@ export default function Home() {
             className="absolute md:w-[257px] md:h-[409px] md:ml-[240px] mt-[280px] w-[205px] h-[327px] ml-20"
           />
         </div>
-        <div className={style.balanceText}>
-          <p className={style.balanceTitle}>
-            Discover a world of convenience, flexibility like never before.
-          </p>
-          <div className={style.balanceList}>
-            <>
-              {features.map((feature) => (
-                <div key={feature.text} className="flex">
-                  <Image
-                    src={`/star.svg`}
-                    width={32}
-                    height={32}
-                    alt="phone-swap"
-                  />
-                  <p className="text-[20px] w-[302px] md:w-[517px] md:text-[24px] md:leading-[29px] leading-[20px] text-[#BBB8EA] ml-4 my-5">
-                    {" "}
-                    {feature.text}
-                  </p>
-                </div>
-              ))}
-              <button className={style.startButton}>Get started</button>
-            </>
+        <Slide delay={200} direction="right">
+          <div className={style.balanceText}>
+            <p className={style.balanceTitle}>
+              Discover a world of convenience, flexibility like never before.
+            </p>
+            <div className={style.balanceList}>
+              <>
+                {features.map((feature) => (
+                  <div key={feature.text} className="flex">
+                    <Image
+                      src={`/star.svg`}
+                      width={32}
+                      height={32}
+                      alt="phone-swap"
+                    />
+                    <p className="text-[20px] w-[302px] md:w-[517px] md:text-[24px] md:leading-[29px] leading-[20px] text-[#BBB8EA] ml-4 my-5">
+                      {" "}
+                      {feature.text}
+                    </p>
+                  </div>
+                ))}
+                <button className={style.startButton}>Get started</button>
+              </>
+            </div>
           </div>
-        </div>
+        </Slide>
       </section>
       <section className={style.howTo}>
         <p className={style.howToTitle}>Using Gasalt is as Easy as 1-2-3!</p>
         <div className={style.howToBody}>
-        <div className={style.howToPhoto}>
+          <div className={style.howToPhoto}>
             <div className={style.howPhotoContainer}>
               <div className={style.howPhotoContainerImage}>
-                <Image
-                  className="mx-auto md:mt-[220px] mt-[100px] w-[263px] overflow-y-hidden h-[538px]"
-                  src={`/phone-front.svg`}
-                  width={332}
-                  height={673}
-                  alt="iphone"
-                />
+                <Slide direction="up" triggerOnce>
+                  <Image
+                    className="mx-auto md:mt-[220px] mt-[100px] w-[263px] overflow-y-hidden h-[538px]"
+                    src={`/phone-front.svg`}
+                    width={332}
+                    height={673}
+                    alt="iphone"
+                  />
+                </Slide>
               </div>
             </div>
           </div>
           <div className={style.howToText}>
-            <>
+            <Fade cascade direction="up" delay={500} triggerOnce>
               {howTos.map((how) => (
                 <div key={how.image} className={style.howToGroup}>
                   <div className="w-[48px] h-[48px] bg-[#F9F5FF] flex justify-center items-center rounded-full">
@@ -275,14 +295,14 @@ export default function Home() {
                     </div>
                   </div>
                   <div className={style.howList}>
-                    <p className={style.howListTitle}>
-                      {how.title}
-                    </p>
+                    <p className={style.howListTitle}>{how.title}</p>
                     <p className={style.howListNote}>{how.note}</p>
                   </div>
                 </div>
               ))}
-              <div className={style.howIcons}>
+            </Fade>
+            <div className={style.howIcons}>
+              <Fade direction="up" cascade delay={200}>
                 <Image
                   src={`/app-store-black.png`}
                   width={157}
@@ -297,17 +317,13 @@ export default function Home() {
                   alt="play-store-black"
                   className={style.black}
                 />
-              </div>
-            </>
+              </Fade>
+            </div>
           </div>
-
         </div>
       </section>
       <footer className={style.footer}>
-        <p className="text-[#FFFFFF] text-[32px] text-center pt-16">
-          {" "}
-          Gasalt{" "}
-        </p>
+        <p className="text-[#FFFFFF] text-[32px] text-center pt-16"> Gasalt </p>
         <p className={style.footerStarted}>
           {" "}
           {"Let’s get started on something great"}{" "}
@@ -320,9 +336,11 @@ export default function Home() {
             Get started
           </button>
         </div>
-        <hr  className={style.footerBorder}/>
+        <hr className={style.footerBorder} />
         <div className="md:flex-row flex-col-reverse flex md:w-[1280px] w-[330px] justify-between mt-10 md:mx-auto  text-[16px] text-[#98A2B3]">
-          <p className="text-center ml-16 mt-5 md:mt-0 md:ml-0">© 2023 Gasalt. All rights reserved.</p>
+          <p className="text-center ml-16 mt-5 md:mt-0 md:ml-0">
+            © 2023 Gasalt. All rights reserved.
+          </p>
           <div className="flex md:flex-row flex-col justify-center items-center md:ml-0 ml-20 space-y-5 md:space-y-0 md:space-x-5 leading-[24px]">
             <p>Email</p>
             <p>Github</p>
