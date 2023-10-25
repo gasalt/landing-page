@@ -33,15 +33,14 @@
       }
     }
     .preview {
-      // @apply flex md:justify-end mx-auto justify-center w-11/12 md:h-[630px] mr-2 border;
-      @apply flex md:justify-center mx-auto md:mr-0 md:mr-5 ml-20 md:ml-0 md:relative md:right-0 relative right-[-50px];
+      @apply flex ml-8 md:justify-center md:ml-0 md:relative md:right-0;
     }
   }
 }
 .why {
   @apply bg-[#191832] py-20 px-5;
   .whyTitle {
-    @apply text-[22px] md:text-[34px] md:w-[667px] text-center mx-auto md:mt-20;
+    @apply text-[32px] md:text-[56px] md:w-[667px] text-center mx-auto md:mt-20;
     font-weight: 600;
     line-height: 77.45px;
     background: linear-gradient(to right, #dfc6ff, #bb87fe, #d9bbff);
@@ -50,21 +49,20 @@
     background-clip: text;
   }
   .whyDescription {
-    @apply md:w-[700px] w-[400px] text-[#BBB8EA] text-[20px] md:text-[18px] text-center mx-auto;
+    @apply md:w-[879px] w-[348px] text-[#BBB8EA] text-[20px] md:text-[24px] text-center mx-auto ;
   }
   .whyCards {
-    @apply md:space-x-4 px-20 md:px-0 md:flex md:ml-20 mt-20 overflow-x-scroll scrollbar-hide md:w-[78%];
+    @apply md:space-x-5 space-y-5 md:space-y-0 px-20 md:px-0 md:flex-row flex flex-col items-center md:ml-20 mt-20 overflow-x-scroll scrollbar-hide;
     .whyCard {
-      @apply border-[#2C2A56] border rounded-xl py-[48px] md:pl-[45px] px-[30px] md:pr-[50px] w-[290px] h-[319px] md:w-[590px] md:h-[415px] mb-4 md:mb-0;
       .whyCardLogo {
         @apply bg-[#0D0C27] h-[99.2px] md:h-[90px] w-[99.2px] md:w-[90px] rounded-xl flex justify-center;
       }
       .whyCardTitle {
-        @apply mt-3 text-[22px] md:text-[21.7px] text-[#CECCEF] w-[240px] md:w-[204px];
+        @apply mt-4 text-[24px] md:text-[32px] text-[#CECCEF] w-[292px] md:w-[351px];
         font-weight: 600;
       }
       .whyCardDescription {
-        @apply text-[#BBB8EA] mt-4 text-[12px] md:text-[18px] md:leading-[33px] w-[220px] md:w-[285px];
+        @apply text-[#BBB8EA] mt-4 text-[16px] md:text-[24px] md:leading-[33px] w-[292px] md:w-[351px];
         font-weight: 400;
       }
     }
@@ -78,48 +76,51 @@
 }
 
 .elevate {
-  @apply md:h-auto h-[1000px];
-  @apply bg-bg md:h-[700px] flex md:flex-row flex-col;
+  @apply h-[1090px] bg-bg md:h-[700px] flex flex-col md:flex-row-reverse py-[100px] md:px-20;
   .elevateText {
-    @apply flex-1 flex flex-col items-center justify-center md:pr-[100px] md:mt-[30px] md:relative md:left-0 md:right-0 md:top-0 md:bottom-0 absolute left-20 mt-[600px];
+    @apply flex-1 items-center flex flex-col justify-center md:mt-[200px] mt-[70px];
+
     .elevateTitle {
-      @apply text-[22px] md:text-[32px] leading-[26.73px] md:leading-[40.09px] w-[270px] md:w-[450px];
+      @apply text-[32px] md:text-[48px] leading-[38.73px] md:leading-[58.09px] w-[348px] md:w-[650px];
       font-weight: 600;
-      background: linear-gradient(to right, #dfc6ff, #be8bff);
+      background: linear-gradient(88.79deg, #DFC6FF 23.83%, #BE8BFF 57.94%);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
       background-clip: text;
     }
     .elevateNote {
-      @apply text-[#BBB8EA] md:leading-[32px] md:text-[20px] mt-5 md:w-[450px] w-[270px];
+      @apply text-[#BBB8EA] md:leading-[32px] leading-[28px] md:text-[24px] mt-5 md:w-[650px] w-[348px] text-[20px];
       font-weight: 500;
     }
     .startButton {
-      @apply bg-primary-default w-[116px] h-[44px] text-[#F6F6F6] rounded-lg mt-5 hover:bg-primary-hover hover:border hover:border-primary-default md:relative md:right-[165px] relative right-[75px];
+      @apply w-full;
+      button {
+        @apply bg-primary-default text-[#F6F6F6] h-[48px] w-[136px] rounded-lg text-[16px] hover:bg-primary-hover hover:border hover:border-primary-default mt-10 ml-8 md:ml-3;
+      }
     }
   }
   .elevatePhone {
-    @apply flex-1 flex flex-col items-center justify-center md:mt-[250px] md:relative md:left-0 md:right-0 md:top-0 md:bottom-0 absolute left-[150px] mt-[100px] ;
+    @apply flex-1 flex flex-col items-center justify-center md:mt-[350px];
   }
 }
 
 .balance {
-  @apply bg-bg md:h-[1090px] h-[1200px] md:flex md:flex-row ;
+  @apply bg-bg md:h-[1250px] h-[1200px] md:flex md:flex-row mb-14 md:mb-0;
   .balancePhone {
-    @apply flex-1 flex flex-col items-center justify-center md:py-0 md:pr-[300px] ml-[-140px] md:ml-0;
+    @apply flex-1 flex-col justify-center items-center flex md:mt-[100px];
   }
   .balanceText {
-    @apply flex-1 flex-col items-center justify-center flex mt-[90px] md:mt-20 md:w-[358px] w-[500px] md:pr-[100px];
+    @apply flex-1 md:mt-[350px] md:w-[573px] ml-8 md:ml-0 mt-[100px];
     .balanceTitle {
-      @apply text-[32px] md:text-[38px] md:leading-[41.09px] md:w-[573px] w-[400px] leading-[38px];
+      @apply text-[32px] md:text-[48px] md:leading-[58.09px] leading-[38px];
       font-weight: 600;
-      background: linear-gradient(to right, #dfc6ff, #be8bff);
+      background: linear-gradient(88.79deg, #DFC6FF 23.83%, #BE8BFF 57.94%);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
       background-clip: text;
     }
     .balanceList {
-      @apply md:w-[573px] w-[400px] mt-8;
+      @apply mt-8;
     }
     .startButton {
       @apply bg-primary-default w-[136px] h-[44px] text-[#F6F6F6] rounded-lg mt-5 hover:bg-primary-hover hover:border hover:border-primary-default;
@@ -127,58 +128,65 @@
   }
 }
 
+
+
 .howTo {
-  @apply md:h-[1000px] h-[1700px] bg-[#DFDEF4] md:py-40 py-20;
+  @apply bg-[#DFDEF4] py-20 md:h-[1248px];
   .howToTitle {
-    @apply md:text-[50px] text-[32px] md:text-center md:w-auto w-[390px] text-center ml-[20px];
+    @apply md:text-[64px] text-[32px] md:leading-[77px] leading-[38.73px] md:w-full text-center;
     font-weight: 600;
-    font-weight: 600;
-      background: linear-gradient(to right, #552B8C, #51238C, #774DAE);
+    background: linear-gradient(88.79deg, #552B8C 23.83%, #51238C 57.94%, #774DAE 95.02%);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
       background-clip: text;
   }
   .howToBody {
-    @apply flex md:flex-row flex-col;
+    @apply flex md:flex-row-reverse flex-col ;
     .howToText {
-      @apply flex-1 flex flex-col justify-center items-center py-20 ;
+      @apply flex-1 flex flex-col justify-center items-center md:py-20 w-[355px] md:w-[560px];
       .howToGroup {
-        @apply flex mb-11 md:relative md:top-0 md:right-0 relative top-[600px] right-[45px];
-        font-weight: 500;
+        @apply flex ml-5 md:ml-0 my-4;
         .howList {
-          @apply ml-5 md:w-[454px] w-[370px] text-[#667085]
+          @apply ml-2 md:w-[496px] text-[#667085] text-[16px];
+          .howListTitle {
+            @apply text-[#101828] leading-[30px] md:text-[30px] text-[20px] md:w-[496px] w-[291px];
+            font-weight: 500;
+          }
+          .howListNote {
+            @apply text-[16px] mt-2;
+          }
         }
       }
       .howIcons {
-        @apply flex md:flex-row flex-col md:relative md:top-0 md:right-0 relative top-[600px] right-[50px] md:w-[400px] w-[300px];
+        @apply flex md:flex-row flex-col md:w-[400px] w-[300px] ml-16 mt-10 md:mt-20 md:space-x-5;
         .black {
           @apply md:mt-0 mt-5;
         }
       }
     }
     .howToPhoto {
-      @apply flex-1 py-20 flex justify-center md:relative absolute;
+      @apply flex-1 mt-20 flex justify-center;
       .howPhotoContainer {
-        @apply bg-[#4A41C7] md:h-[560px] md:w-[560px] h-[550px] w-[400px] flex items-end justify-center rounded-2xl md:relative left-0 relative left-10;
+        @apply w-[355px] h-[448px] md:w-[560px] md:h-[560px] rounded-3xl;
+        background: linear-gradient(0deg, #4A41C7, #4A41C7);
+        .howPhotoContainerImage {
+            @apply overflow-y-hidden md:h-[560px] h-[448px];
+        }
       }
     }
   }
 }
 
+
 .footer {
   @apply bg-[#0F0D2C] md:h-[459px] h-[600px];
   .footerStarted {
-    @apply md:text-[32px] text-[32px] md:w-auto w-[300px] text-center md:relative md:left-0 relative left-[150px];
+    @apply leading-[38px] text-[32px] text-center;
+    font-weight: 600;
     color: rgb(203, 170, 230);
   }
   .footerBorder {
-    @apply md:w-[1280px] w-[330px] border-t border-[#475467] mx-auto mt-16 flex md:justify-between
-  }
-  .rights {
-    @apply mt-8 text-[#FFF] text-[16px] md:relative md:top-0 md:left-0 relative top-[150px] left-[40px];
-  }
-  .options {
-    @apply flex md:flex-row flex-col mt-8 text-[#FFF] md:space-x-5 md:space-y-0 space-y-5 md:relative md:right-0 absolute right-[200px]
+    @apply md:w-[1280px] w-[330px] border-[#475467] mx-auto mt-16 flex;
   }
 }
 @media (max-width: 390px) {
