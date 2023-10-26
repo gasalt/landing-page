@@ -89,7 +89,7 @@ export default function Home() {
       <section className={style.landing}>
         <div className={style.nav}>
           <p className={style.logo}>Gasalt</p>
-          <button>Get started</button>
+          <button onClick={() => setShowWaitlistModal(true)}>Get started</button>
         </div>
         <div className={style.hero}>
           <div className={style.heroText}>
