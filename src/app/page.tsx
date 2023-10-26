@@ -1,7 +1,10 @@
 "use client";
-import { Slide, Fade, Zoom } from "react-awesome-reveal";
 import Image from "next/image";
+import Script from "next/script";
+import { Slide, Fade, Zoom } from "react-awesome-reveal";
 import style from "@/styles/page.module.scss";
+import Modal from "@/Components/Modal";
+import { useState } from "react";
 const prefix = "";
 const whyCards = [
   {
@@ -68,6 +71,7 @@ const howTos = [
 ];
 
 export default function Home() {
+  const [showWaitlistModal, setShowWaitlistModal] = useState(false);
   const slideLeft = (event: any) => {
     event.preventDefault();
     let slider = document.getElementById("slider")!;
@@ -102,13 +106,15 @@ export default function Home() {
                   width={157}
                   height={46}
                   alt="app-store"
+                  className="cursor-pointer"
                 />
                 <Image
                   src={`/play-store.svg`}
                   width={157}
                   height={46}
                   alt="app-store"
-                  className={style.play}
+                  className={`${style.play} cursor-pointer`}
+                  
                 />
               </Fade>
             </div>
@@ -308,14 +314,14 @@ export default function Home() {
                   width={157}
                   height={46}
                   alt="app-store-black"
-                  // className="mr-10"
+                  className="cursor-pointer"
                 />
                 <Image
                   src={`/play-store-black.png`}
                   width={157}
                   height={46}
                   alt="play-store-black"
-                  className={style.black}
+                  className={`${style.black} cursor-pointer`}
                 />
               </Fade>
             </div>
@@ -323,7 +329,10 @@ export default function Home() {
         </div>
       </section>
       <footer className={style.footer}>
-        <p className="text-[#FFFFFF] text-[32px] text-center pt-16"> Gasalt </p>
+        <p className="text-[#FFFFFF] text-[32px] text-center pt-16 font-semibold mb-3">
+          {" "}
+          Gasalt{" "}
+        </p>
         <p className={style.footerStarted}>
           {" "}
           {"Let’s get started on something great"}{" "}
@@ -332,7 +341,10 @@ export default function Home() {
           <button className="bg-primary-default text-[#FFF] w-[134px] h-[48px] rounded-lg">
             View Demo
           </button>
-          <button className="transparent border text-[#FFF] border-primary-default w-[134px] h-[48px] rounded-lg">
+          <button
+            onClick={() => setShowWaitlistModal(true)}
+            className={`transparent border text-[#FFF] border-primary-default w-[134px] h-[48px] rounded-lg`}
+          >
             Get started
           </button>
         </div>
@@ -351,6 +363,28 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      {showWaitlistModal && (
+        <WaitListModal setShowWaitlistModal={setShowWaitlistModal} />
+      )}
     </main>
   );
 }
+
+const WaitListModal = ({
+  setShowWaitlistModal,
+}: {
+  setShowWaitlistModal: any;
+}) => {
+  return (
+    <Modal setShowModal={setShowWaitlistModal}>
+      <Script src="https://getlaunchlist.com/js/widget.js" defer/>
+
+      <h3 className="font-semibold text-lg">Be the first to know</h3>
+      <div
+        className="launchlist-widget"
+        data-key-id="z4OLWR"
+        data-height="180px"
+      ></div>
+    </Modal>
+  );
+};

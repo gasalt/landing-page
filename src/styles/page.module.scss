@@ -188,6 +188,9 @@
   .footerBorder {
     @apply md:w-[1280px] w-[330px] border-[#475467] mx-auto mt-16 flex;
   }
+  .footerGetStarted {
+    @apply text-red-500;
+  }
 }
 @media (max-width: 390px) {
   .landing {
