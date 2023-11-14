@@ -293,11 +293,11 @@ export default function Home() {
       <section className={style.howTo}>
         <p className={style.howToTitle}>Using Gasalt is as Easy as 1-2-3!</p>
         <div className="md:flex md:flex-row-reverse mt-10">
-          <div className="flex-1 h-[560px] flex justify-center">
+          <div className="flex-1 mb-10 flex justify-center">
             <div className="bg-gradient-to-b from-[#554CDB] to-[#3830A9] h-[450px] overflow-y-hidden rounded-xl mt-5 md:w-[70%]">
               <Slide direction="up" triggerOnce>
                 <Image
-                  className="mx-auto mt-[150px] h-[500px]"
+                  className="mx-auto mt-[150px] h-[450px]"
                   src={`/phone-front.svg`}
                   width={332}
                   height={673}
@@ -312,7 +312,7 @@ export default function Home() {
               direction="up"
               delay={500}
               triggerOnce
-              className="flex ml-5 md:ml-0 my-4"
+              className="flex ml-5 md:ml-0"
             >
               {howTos.map((how) => (
                 <div key={how.image} className="flex">
